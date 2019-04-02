@@ -1,0 +1,158 @@
+#form_upload_pendaftaran * {
+	margin: 0;
+	padding: 0;
+}
+
+#form_upload_pendaftaran {
+	position: absolute;
+	box-sizing: border-box;
+	background: #E5E5E5;
+	width: 1280px;
+	height: 800px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	opacity: 1;
+	--web-view-name: form upload pendaftaran kp;
+	--web-view-id: form_upload_pendaftaran_kp;
+	--web-enable-deep-linking: true;
+}
+
+#Rectangle_25 {
+	opacity: 1;
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.059));
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112, 112, 112, 0.15);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+
+.Rectangle_25 {
+	position: absolute;
+	overflow: visible;
+	width: 474px;
+	height: 167px;
+	left: 469px;
+	top: 278px;
+}
+
+#Form_Upload_Pendaftaran_Kuliah {
+	opacity: 1;
+	position: absolute;
+	left: 374px;
+	top: 111px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 533px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 38px;
+	color: rgba(7,0,70,1);
+	letter-spacing: 0.03px;
+}
+
+#Berkas {
+	opacity: 1;
+	position: absolute;
+	left: 338px;
+	top: 281px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 69px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(0,0,0,1);
+}
+
+#drag_and_drop_or_click_here {
+	opacity: 1;
+	position: absolute;
+	left: 614px;
+	top: 337px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 117px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 16px;
+	color: rgba(0,0,0,1);
+}
+
+#_ {
+	opacity: 1;
+	position: absolute;
+	left: 438px;
+	top: 281px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 6px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(0,0,0,1);
+}
+
+#Rectangle_17 {
+	opacity: 1;
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.059));
+	fill: rgba(7,0,70,1);
+	stroke: rgba(112, 112, 112, 0.03);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+
+.Rectangle_17 {
+	position: absolute;
+	overflow: visible;
+	width: 194px;
+	height: 61px;
+	left: 584px;
+	top: 505px;
+}
+
+#Upload_tombol {
+	opacity: 1;
+	position: absolute;
+	left: 643px;
+	top: 515px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 60px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	color: rgba(255,255,255,1);
+}
