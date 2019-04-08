@@ -1,110 +1,50 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-<style id="applicationstylesheet" type="text/css">
-	#logo_itera {
-		opacity: 1;
-		fill: url(#logo_itera);
-		position: left;
-		overflow: visible;
-		width: 51px;
-		height: 62px;
-		top: 36px;
-	}
+<header class="site-header">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .nav {
+            position: fixed;
+            background-color: rgb(255, 255, 255); 
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height : 50px;
+            left: 650px;
+            top: 15px;
+            overflow: hidden; }
+            .nav li {
+                float: left;
+                font-family: Poppins;
+                font-style: normal;
+                font-size: 19 px;
+                padding: 20px; }
+            .nav li a {
+                display: block;
+                color: rgb(7, 0, 70);
+                text-align: center;
+                padding: 10px 16px; 
+                text-decoration: none; }
+            .nav li a:hover {
+                background-color: antiquewhite; }
+        .container-fluid {
+            max-width: 1600px;
+            background-color: white; }
+    </style>
 
-	#HOME {
-		opacity: 1;
-		position: absolute;
-		left: 598px;
-		top: 39px;
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		width: 58px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 19px;
-		color: rgba(7,0,70,1);
-		letter-spacing: 0.43px;
-	}
-	#FAQ {
-		opacity: 1;
-		position: absolute;
-		left: 980px;
-		top: 39px;
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		width: 41px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 19px;
-		color: rgba(7,0,70,1);
-		letter-spacing: 0.43px;
-	}
-	#UPLOAD {
-		opacity: 1;
-		position: absolute;
-		left: 778px;
-		top: 39px;
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		width: 80px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 19px;
-		color: rgba(7,0,70,1);
-		letter-spacing: 0.43px;
-	}
-	#SIGN_OUT {
-		opacity: 1;
-		position: absolute;
-		left: 1142px;
-		top: 39px;
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		width: 95px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 19px;
-		color: rgba(7,0,70,1);
-		letter-spacing: 0.43px;
-	}
-	
+    <div class="container-fluid" style="background-color: rgb(255, 255, 255)">
+        <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;
+            padding :0 5rem 0 5rem !important">
 
-</style>
+            <a href="#"><img src="<?php echo base_url('assets/images/logo_itera.png')?>" 
+                style="margin : 10;height: 70px; width: 58px; "></a>
+                
+        </div>
 
-<div class="logo_itera" style="padding :0 5rem 0 5rem !important">
-	<img src="assets/images/logo_itera.png" style="margin : 10;height: 7%; width: 7%; ">
-</div>
-
-<div id="HOME">
-	<span>HOME</span>
-</div>
-<div id="FAQ">
-	<span>FAQ</span>
-</div>
-<div id="UPLOAD">
-		<span>UPLOAD</span>
-</div>
-<div id="SIGN_OUT">
-	<span>SIGN OUT</span>
-</div>
+        <ul class="nav" style="padding :0 5rem 0 5rem !important">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">UPLOAD</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li ><a href="#">SIGN OUT</a></li>
+        </ul>
+    </div>
+</header>
