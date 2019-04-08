@@ -97,13 +97,13 @@
 </div>
 
 <div id="HOME">
-	<span>HOME</span>
+	<span><a href="<?php echo base_url();?>">HOME</a></span>
 </div>
 <div id="FAQ">
-	<span>FAQ</span>
+	<span><a href="<?php echo base_url('c_faq');?>">FAQ</a></span>
 </div>
 <div id="UPLOAD">
-		<span>UPLOAD</span>
+		<span><a href="<?php echo base_url('c_upload');?>">UPLOAD</a></span>
 </div>
 <div id="SIGN_OUT">
 	<span>SIGN OUT</span>
