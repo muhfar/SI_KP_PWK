@@ -13,8 +13,8 @@
         <?php $this->load->view('_header_login');?>
 
         <!--FORM UPLOAD LAPORAN-->
+        <title-page>Form Upload<br>Laporan Kerja Praktik</title-page>
         <div class="form">
-            <title-form>FORM UPLOAD<br>LAPORAN KERJA PRAKTIK</title-form>
             <label>Laporan : </label>
             <rect></rect> 
             <a href="#"><tombol>

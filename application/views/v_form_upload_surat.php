@@ -12,9 +12,10 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('_header_login');?>
 
+
+        <title-page>Form Upload<br>Surat Pengantar Kerja Praktik</title-page>
         <!--FORM UPLOAD LAPORAN-->
         <div class="form">
-            <title-form style="left:400px">FORM UPLOAD<br>SURAT PENGANTAR  KERJA PRAKTIK</title-form>
             <label>Laporan : </label>
             <rect></rect> 
             <a href="#"><tombol>
