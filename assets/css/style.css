@@ -136,23 +136,6 @@
 .form {
     max-width: 1600px;
     top: 75px; }
-    .form title-form {
-        opacity: 1;
-        position: absolute;
-        top: 111px;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        overflow: visible;
-        width: 533px;
-        white-space: nowrap;
-        text-align: center;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 38px;
-        color: rgba(7,0,70,1);
-        letter-spacing: 0.03px; }
     .form label {
         opacity: 1;
         position: absolute;
@@ -213,3 +196,137 @@
 		font-weight: bold;
 		font-size: 16px;
         color: rgba(7,0,70,1); }
+
+title-page {
+    opacity: 1;
+    position: absolute;
+    top: 111px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    color: rgba(7,0,70,1);
+    letter-spacing: 0.03px; }
+
+.instansi {
+    opacity: 1;
+	position: absolute;
+	width: 226px;
+	height: 206px;
+	left: 48px;
+	top: 225px;
+    overflow: visible; }
+    .instansi icon-instansi {
+        opacity: 1;
+		filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+        fill: rgba(214,237,255,1);
+        position: absolute;
+		overflow: visible;
+		width: 226px;
+		height: 163px;
+		left: 0px;
+        top: 0px;
+        border: 4px dashed cornflowerblue; }
+    .instansi title-instansi {
+        opacity: 1;
+		position: absolute;
+		left: 40px;
+		top: 178px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 147px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(7,0,70,1);
+        letter-spacing: 0.03px; }
+        
+.faq {
+    opacity: 1;
+	position: absolute;
+	width: 555px;
+	height: 108px;
+	left: 110px;
+	top: 207px;
+    overflow: visible; }
+    .faq ques {
+        opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 516px;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 19px;
+        color: rgba(0,0,0,1); }
+    .faq ans {
+        opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 60px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 515px;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+        color: rgba(94,93,93,1); }
+        
+table.paleBlueRows {
+    font-family: Poppins;
+    border: 1px solid #FFFFFF;
+    width: 1200px;
+    height: 200px;
+    top: 200px;
+    left: 75px;
+    
+    text-align: center;
+    border-collapse: collapse; }
+    table.paleBlueRows td, table.paleBlueRows th {
+        border: 1px solid #FFFFFF;
+        padding: 3px 2px; }
+    table.paleBlueRows tbody td {
+        font-size: 13px; }
+    table.paleBlueRows tr:nth-child(even) {
+        background: #D0E4F5; }
+    table.paleBlueRows thead {
+        background: #0B6FA4;
+        border-bottom: 5px solid #FFFFFF; }
+    table.paleBlueRows thead th {
+        font-size: 17px;
+        font-weight: bold;
+        color: #FFFFFF;
+        text-align: center;
+        border-left: 2px solid #FFFFFF; }
+    table.paleBlueRows thead th:first-child {
+        border-left: none; }
+    table.paleBlueRows tfoot {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333333;
+        background: #D0E4F5;
+        border-top: 3px solid #444444; }
+    table.paleBlueRows tfoot td {
+        font-size: 14px; }
