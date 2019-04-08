@@ -20,6 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('v_form_upload_surat');
+		$this->load->view('v_home');
 	}
 }
