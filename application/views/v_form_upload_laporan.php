@@ -12,6 +12,17 @@
 	<meta name="author" content="" />
 
 	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- Dropzone CSS & JS -->
+    <link href='<?php echo base_url('assets/css/dropzone.css'); ?>' type='text/css' rel='stylesheet'>
+    <script src='<?php echo base_url("assets/js/dropzone.js") ?>' type='text/javascript'></script>
+    
+    <!-- Dropzone CDN -->
+    <!-- 
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.css' type='text/css' rel='stylesheet'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js' type='text/javascript'></script>
+    -->
+
 	<style>
 		#Upload_tombol {
 		opacity: 1;
@@ -31,38 +42,91 @@
 		font-size: 16px;
 		color: rgba(255,255,255,1);
 	}
+
+	.form_upload{
+      padding: 5px;
+      margin: 0 auto;
+      position: absolute;
+	  left: 469px;
+	  top: 278px;
+	  width: 30% ;
+      height: 20%;
+    }    
+    .dz-message{
+      text-align: center;
+      font-size: 28px;
+    }
 	</style>
+	
 </head>
 
 <body>
 	
 
 	<div id="form_upload_pendaftaran">
-	<svg class="Rectangle_25">
+	<!-- <svg class="Rectangle_25">
 		<rect id="Rectangle_25" rx="6" ry="6" x="0" y="0" width="474" height="167">
 		</rect>
-	</svg>
+	</svg> -->
 	<div id="Form_Upload_Pendaftaran_Kuliah">
 		<span>Form Upload<br/>Laporan Kuliah Praktik</span>
 	</div>
 	<div id="Berkas">
 		<span>Laporan</span>
 	</div>
-	<div id="drag_and_drop_or_click_here">
-		<span>drag and drop<br/>or click here</span>
-	</div>
+	
 	<div id="_">
 		<span>:</span>
 	</div>
+
+    
+	<div class='form_upload'>
+	  <!-- Dropzone -->
+      <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" class="dropzone" id="fileUpload">   	
+      	<p class="dz-message text-center">Tekan atau Tarik Kesini!</p>
+      	<!-- <input type="button" name="Cancel" value="Cancel"> -->
+      </form> 
+    </div>
+
 	<svg class="Rectangle_17">
 		<rect id="Rectangle_17" rx="21.5" ry="21.5" x="0" y="0" width="176" height="43">
 		</rect>
-	</svg>
+	</svg> 
 	<div id="Upload_tombol">
 		<span>Upload</span>
 	</div>
 	
 
+	<script>
+		Dropzone.options.fileUpload = {
+		  init: function() {
+		    this.on("success", function(file) { 
+		    	alert("Added file."); 
+		    });
+		    this.on("error", function(file) { 
+		    	alert("File error"); 
+		    	this.removeFile(file);
+		    });
+
+		    this.on("maxfilesexceeded", function(file) { 
+		    	alert("maxfilesexceeded file."); 
+		    	this.removeFile(file);
+		    });		    
+		  },
+		  paramName : "file",
+		  acceptedFiles: 'application/pdf',
+		  maxFiles: 1,
+		  maxFilesize: 10,
+		  addRemoveLinks: true
+		};
+
+
+
+	
+    </script>
+
 	<?php $this->load->view('_header_login');?>
+
+
 </body>
 </html>
