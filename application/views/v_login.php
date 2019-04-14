@@ -10,21 +10,14 @@
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header_login');?>
+        <?php $this->load->view('_header');?>
 
-
-        <title-page>Form Upload<br>Surat Pengantar Kerja Praktik</title-page>
-        <!--FORM UPLOAD LAPORAN-->
-        <div class="form">
-            <label>Laporan : </label>
-            <rect></rect> 
-            <a href="#"><tombol>
-                <p>Upload</p>
-            </tombol></a>
+        <!--FORM LOGIN-->
+        <div class="login">
             
         </div>
 
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
     </body>
-</html>
+</html>>

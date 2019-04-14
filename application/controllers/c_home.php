@@ -1,10 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-class c_faq extends CI_Controller {
+class c_home extends CI_Controller {
 	public function index()
 	{
-		$this->load->view('v_faq');
+		$this->load->view('v_home');
 	}
 }
-

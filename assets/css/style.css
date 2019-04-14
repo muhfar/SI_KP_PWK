@@ -1,158 +1,332 @@
-#form_upload_pendaftaran * {
-	margin: 0;
-	padding: 0;
-}
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 60px 0;
+    z-index: 2;
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out; }
+    .site-header.scrolled {
+      padding: 20px 0;
+      background: #fff;
+      -webkit-box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.1); }
 
-#form_upload_pendaftaran {
+.site-logo {
+    display: inline-block;
+    padding-left: 40px; 
+    top: 15px;
+    left: 45px;
+    position: absolute; }
+    .site-logo a {
+        opacity: 1;
+        fill: url(#logo);
+        position: left;
+        overflow: visible;
+        width: 51px;
+        height: 62px;
+        top: 36px;
+        line-height: 1; }
+
+.container-fluid {
+    max-width: 1600px; }
+    .container-fluid ul {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        display:inline-block;
+        vertical-align:top; }
+
+        .banner {
+            opacity: 1;
+            fill: transparent;
+            position: absolute;
+            overflow: visible;
+            width: 1350px;
+            height: 400px;
+            left: -3px;
+            top: 100px; 
+            background-repeat: no-repeat;
+            background-position: right; }
+                .banner h1 {
+                    padding-left: 75px;
+                    font-family: Poppins;
+                    font-style: bold;
+                    font-size: 45px; 
+                    color: rgba(7,0,70); }
+                .banner h2 {
+                    padding-left: 75px;
+                    font-family: Poppins;
+                    font-style: bold;
+                    font-size: 25px; 
+                    color: rgba(7,0,70); }
+
+.menu {
+    opacity: 1;
 	position: absolute;
-	box-sizing: border-box;
-	background: #E5E5E5;
-	width: 1280px;
-	height: 800px;
-	background-color: rgba(255,255,255,1);
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	opacity: 1;
-	--web-view-name: form upload pendaftaran kp;
-	--web-view-id: form_upload_pendaftaran_kp;
-	--web-enable-deep-linking: true;
-}
+	width: 253px;
+	height: 92px;
+	left: 103px;
+	top: 525px;
+    overflow: visible; }
+    .menu icon {
+        opacity: 1;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+        fill: rgba(214,237,255,1);
+        position: absolute;
+        overflow: visible;
+        width: 92px;
+        height: 92px;
+        left: 0px;
+        top: 0px; 
+        border: 4px dashed cornflowerblue; }
+    .menu title-icon {
+        opacity: 1;
+        position: absolute;
+        left: 107px;
+        top: 22px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        width: 147px;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        color: rgba(7,0,70,1);
+        letter-spacing: 0.83px; }
 
-#Rectangle_25 {
-	opacity: 1;
-	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.059));
-	fill: rgba(255,255,255,1);
-	stroke: rgba(112, 112, 112, 0.15);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
+.post {
+    max-width: 1600px;
+    top: 750px; 
+    left: 72px; }
+    .post title-post{
+        opacity: 1;
+        position: absolute;
+        left: 792px;
+        top: 750px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        width: 390px;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 41px;
+        color: rgba(7,0,70,1);
+        letter-spacing: 0.43px; }
+    .post pict-post{
+        opacity: 1;
+        filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.161));
+        fill: rgba(214,237,255,1); 
+        position: absolute;
+        overflow: visible;
+        width: 677px;
+        height: 383px;
+        top:750px;
+        border: 4px dashed cornflowerblue; }
 
-.Rectangle_25 {
+.form {
+    max-width: 1600px;
+    top: 75px; }
+    .form label {
+        opacity: 1;
+        position: absolute;
+        left: 338px;
+        top: 281px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        width: 69px;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        color: rgba(7,0,70,1); }
+    .form rect {
+        opacity: 1;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.059));
+        fill: rgba(255,255,255,1);
+        stroke: rgba(112, 112, 112, 0.15);
+        stroke-width: 1px;
+        stroke-linejoin: miter;
+        stroke-linecap: butt;
+        stroke-miterlimit: 4;
+        shape-rendering: auto; 
+        position: absolute;
+        overflow: visible;
+        width: 474px;
+        height: 167px;
+        left: 469px;
+        top: 278px; 
+        border: 4px dashed rgba(7,0,70,1); }
+    .form tombol {
+        opacity: 1;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.059));
+        fill: rgba(7,0,70,1);
+        stroke: rgba(112, 112, 112, 0.03);
+        stroke-width: 1px;
+        stroke-linejoin: miter;
+        stroke-linecap: butt;
+        stroke-miterlimit: 4;
+        shape-rendering: auto;
+        position: absolute;
+        overflow: visible;
+        width: 194px;
+        height: 61px;
+        left: 584px;
+        top: 505px;
+        background-color: darkgrey; }
+    .form tombol o {
+        opacity: 1;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+        color: rgba(7,0,70,1); }
+
+title-page {
+    opacity: 1;
+    position: absolute;
+    top: 111px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    color: rgba(7,0,70,1);
+    letter-spacing: 0.03px; }
+
+.instansi {
+    opacity: 1;
 	position: absolute;
-	overflow: visible;
-	width: 474px;
-	height: 167px;
-	left: 469px;
-	top: 278px;
-}
-
-#Form_Upload_Pendaftaran_Kuliah {
-	opacity: 1;
+	width: 226px;
+	height: 206px;
+	left: 48px;
+	top: 225px;
+    overflow: visible; }
+    .instansi icon-instansi {
+        opacity: 1;
+		filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+        fill: rgba(214,237,255,1);
+        position: absolute;
+		overflow: visible;
+		width: 226px;
+		height: 163px;
+		left: 0px;
+        top: 0px;
+        border: 4px dashed cornflowerblue; }
+    .instansi title-instansi {
+        opacity: 1;
+		position: absolute;
+		left: 40px;
+		top: 178px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 147px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(7,0,70,1);
+        letter-spacing: 0.03px; }
+        
+.faq {
+    opacity: 1;
 	position: absolute;
-	left: 374px;
-	top: 111px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 533px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 38px;
-	color: rgba(7,0,70,1);
-	letter-spacing: 0.03px;
-}
-
-#Berkas {
-	opacity: 1;
-	position: absolute;
-	left: 338px;
-	top: 281px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 69px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(0,0,0,1);
-}
-
-#drag_and_drop_or_click_here {
-	opacity: 1;
-	position: absolute;
-	left: 614px;
-	top: 337px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 117px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: lighter;
-	font-size: 16px;
-	color: rgba(0,0,0,1);
-}
-
-#_ {
-	opacity: 1;
-	position: absolute;
-	left: 438px;
-	top: 281px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 6px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(0,0,0,1);
-}
-
-#Rectangle_17 {
-	opacity: 1;
-	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.059));
-	fill: rgba(7,0,70,1);
-	stroke: rgba(112, 112, 112, 0.03);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-
-.Rectangle_17 {
-	position: absolute;
-	overflow: visible;
-	width: 194px;
-	height: 61px;
-	left: 584px;
-	top: 505px;
-}
-
-#Upload_tombol {
-	opacity: 1;
-	position: absolute;
-	left: 643px;
-	top: 515px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 60px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 16px;
-	color: rgba(255,255,255,1);
-}
+	width: 555px;
+	height: 108px;
+	left: 110px;
+	top: 207px;
+    overflow: visible; }
+    .faq ques {
+        opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 516px;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 19px;
+        color: rgba(0,0,0,1); }
+    .faq ans {
+        opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 60px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 515px;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+        color: rgba(94,93,93,1); }
+        
+table.paleBlueRows {
+    font-family: Poppins;
+    border: 1px solid #FFFFFF;
+    width: 1200px;
+    height: 200px;
+    top: 200px;
+    left: 75px;
+    
+    text-align: center;
+    border-collapse: collapse; }
+    table.paleBlueRows td, table.paleBlueRows th {
+        border: 1px solid #FFFFFF;
+        padding: 3px 2px; }
+    table.paleBlueRows tbody td {
+        font-size: 13px; }
+    table.paleBlueRows tr:nth-child(even) {
+        background: #D0E4F5; }
+    table.paleBlueRows thead {
+        background: #0B6FA4;
+        border-bottom: 5px solid #FFFFFF; }
+    table.paleBlueRows thead th {
+        font-size: 17px;
+        font-weight: bold;
+        color: #FFFFFF;
+        text-align: center;
+        border-left: 2px solid #FFFFFF; }
+    table.paleBlueRows thead th:first-child {
+        border-left: none; }
+    table.paleBlueRows tfoot {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333333;
+        background: #D0E4F5;
+        border-top: 3px solid #444444; }
+    table.paleBlueRows tfoot td {
+        font-size: 14px; }
