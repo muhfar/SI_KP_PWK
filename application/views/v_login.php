@@ -6,18 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>SI KP PWK</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
     </head>
     <body>
-        <!--LOAD HEADER-->
-        <?php $this->load->view('_header');?>
 
-        <!--FORM LOGIN-->
-        <div class="login">
-            
-        </div>
-
-        <!--FOOTER-->
-        <?php $this->load->view('_footer');?>
-    </body>
+		<div id="id01" >
+			<form class="modalcontent-animate" action="/action_page.php">
+				<div class= "modal">
+					<title-page style="left:0px">Sign In</title-page>
+					
+					<label for="uname">
+						<b type="normal"> Username : </b>
+					</label>
+					<input type="text" placeholder="Enter Your Email or Username" name="uname" required>
+					
+					<br></br>
+					
+					<label for="pass"> 
+						<b type="normal"> Password : </b>
+					</label>
+					<input type="password" placeholder="Enter Password" name="pass" required>
+					
+					<br></br>
+					
+					<button type="submit">
+						<b type="signin">Sign In</b>
+					</button>
+				</div>
+		</div>
+	</body>
 </html>>
