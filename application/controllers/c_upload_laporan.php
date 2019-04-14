@@ -18,8 +18,35 @@ class c_upload_laporan extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct()
+	{
+	   parent::__construct();
+	   $this->load->helper('url');
+	}
+
 	public function index()
 	{
 		$this->load->view('v_form_upload_laporan');
 	}
+
+	public function fileUpload(){
+		if(!empty($_FILES['file']['name'])){
+			//setting upload
+			$config['upload_path']		= './upload/';
+			$config['allowed_types']	= 'pdf';
+			$config['max_size']			= '10240';
+			$config['file_name']		= $_FILES['file']['name'];
+
+			//load config
+			$this->load->library('upload',$config);
+
+			//upload file
+			if($this->upload->do_upload('laporan')){
+				$uploadData = $this->upload->data();
+			}
+
+		}
+	}
+
 }
