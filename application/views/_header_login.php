@@ -40,11 +40,13 @@
                 
         </div>
 
+
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">UPLOAD</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="<?php echo base_url();?>">HOME</a></li>
+            <li><a href="<?php echo base_url('c_faq');?>">UPLOAD</a></li>
+            <li><a href="<?php echo base_url('c_upload');?>">FAQ</a></li>
             <li ><a href="#">SIGN OUT</a></li>
         </ul>
     </div>
 </header>
+

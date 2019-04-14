@@ -41,8 +41,8 @@
         </div>
 
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="<?php echo base_url('c_faq');?>">FAQ</a></li>
             <li ><a href="#">SIGN IN</a></li>
         </ul>
     </div>
