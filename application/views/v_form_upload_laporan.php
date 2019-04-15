@@ -23,6 +23,13 @@
 		    .dz-message{
 		      text-align: center;
 		      font-size: 28px;
+
+
+		    }
+		    .submitBtn{
+		      position: absolute;
+			  left: 469px;
+			  top: 528px;
 		    }
 		</style>
     </head>
@@ -41,10 +48,10 @@
 		      	<!-- <input type="button" name="Cancel" value="Cancel"> -->
 		      </form> 
 		    </div>
-            <rect></rect> 
-            <a href="#"><tombol>
-                <p>Upload</p>
-            </tombol></a>
+            
+            <div align="center">
+            	<button type="button" class="submitBtn" id="submit">Upload</button>
+            </div>
             
         </div>
 
@@ -54,11 +61,27 @@
         <?php $this->load->view('_footer');?>
 	
 	<script>
+		$(document).ready(function(){
+
+
 		Dropzone.options.fileUpload = {
+		  autoProcessQueue: false,
+		  acceptedFiles: 'application/pdf',
+		  maxFiles: 1,
+		  maxFilesize: 10,
+		  addRemoveLinks: true,
 		  init: function() {
-		    this.on("success", function(file) { 
-		    	alert("Added file."); 
+		  	var submitBtn = document.querySelector(#submit);
+				    
+				   
+
+		  	this.on("complete", function(file) { 
+		    	this.removeAllFiles();
+		    	alert("complete");
 		    });
+		    // this.on("success", function(file) { 
+		    // 	alert("Added file."); 
+		    // });
 		    this.on("error", function(file) { 
 		    	alert("File error"); 
 		    	this.removeFile(file);
@@ -68,15 +91,14 @@
 		    	alert("maxfilesexceeded file."); 
 		    	this.removeFile(file);
 		    });		    
-		  },
-		  paramName : "file",
-		  acceptedFiles: 'application/pdf',
-		  maxFiles: 1,
-		  maxFilesize: 10,
-		  addRemoveLinks: true
+		  }
+		  
+		  
 		};
-
+});
     </script>
+
+
 
     </body>
 </html>

@@ -33,7 +33,7 @@ class c_upload_laporan extends CI_Controller {
 	public function fileUpload(){
 		if(!empty($_FILES['file']['name'])){
 			//setting upload
-			$config['upload_path']		= './upload/';
+			$config['upload_path']		= '/upload/laporan';
 			$config['allowed_types']	= 'pdf';
 			$config['max_size']			= '10240';
 			$config['file_name']		= $_FILES['file']['name'];
