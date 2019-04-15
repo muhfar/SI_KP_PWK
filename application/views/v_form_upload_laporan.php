@@ -24,6 +24,6 @@
         </div>
 
         <!--FOOTER-->
-        <?php $this->load->view('_footer');?>
+        <!--<?php $this->load->view('_footer');?>-->
     </body>
 </html>

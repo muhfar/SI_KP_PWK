@@ -43,7 +43,7 @@
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
             <li><a href="<?php echo base_url();?>">HOME</a></li>
             <li><a href="<?php echo base_url('c_faq');?>">FAQ</a></li>
-            <li ><a href="#">SIGN IN</a></li>
+            <li ><a href="<?php echo base_url('c_login');?>">SIGN IN</a></li>
         </ul>
     </div>
 </header>

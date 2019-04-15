@@ -10,22 +10,27 @@
     </head>
     <body>
 
-		<div id="id01" >
+		<div id="id01" style="margin-top:-100px">
 			<form class="modalcontent-animate" action="/action_page.php">
 				<div class= "modal">
-					<title-page style="left:0px">Sign In</title-page>
+					<title-page style="left:0; top:140px">Sign In</title-page>
 					
-					<label for="uname">
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+
+					<label for="uname" style="top:50px">
 						<b type="normal"> Username : </b>
 					</label>
-					<input type="text" placeholder="Enter Your Email or Username" name="uname" required>
+					<input type="text" placeholder="   Enter Your Email or Username" name="uname" required>
 					
 					<br></br>
 					
 					<label for="pass"> 
 						<b type="normal"> Password : </b>
 					</label>
-					<input type="password" placeholder="Enter Password" name="pass" required>
+					<input type="password" placeholder="   Enter Password" name="pass" required>
 					
 					<br></br>
 					
