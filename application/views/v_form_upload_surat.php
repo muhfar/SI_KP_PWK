@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>SI KP PWK</title>
+
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+
     </head>
     <body>
         <!--LOAD HEADER-->
@@ -25,6 +27,7 @@
         </div>
 
         <!--FOOTER-->
-        <!--<?php $this->load->view('_footer');?>-->
+        <?php $this->load->view('_footer');?>
+
     </body>
 </html>
