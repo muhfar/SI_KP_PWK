@@ -33,4 +33,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		// redirect(base_url('c_upload_laporan'), 'refresh');	
 	}
 }
-

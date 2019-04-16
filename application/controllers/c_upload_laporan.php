@@ -18,18 +18,16 @@ class c_upload_laporan extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
+  
 	public function __construct()
 	{
 	   parent::__construct();
 	   $this->load->helper(array('form','url'));
 	}
-
 	public function index()
 	{
 		$this->load->view('v_form_upload_laporan');
 	}
-
 	public function fileUpload(){
 		$this->load->helper(array('form','url'));
 
@@ -57,4 +55,3 @@ class c_upload_laporan extends CI_Controller {
 	}
 
 }
-

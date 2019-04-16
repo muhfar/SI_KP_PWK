@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>SI KP PWK</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+
     </head>
     <body>
         <!--LOAD HEADER-->
@@ -31,12 +32,12 @@
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
             </div><a>
 
-            <a href="#"><div class="menu" style="left: 697px">
+            <a href="<?php echo base_url('c_info_instansi');?>"><div class="menu" style="left: 697px">
                 <icon></icon>
                 <title-icon>Info<br>Instansi</title-icon>
             </div><a>
 
-            <a href="#"><div class="menu" style="left: 1000px">
+            <a href="<?php echo base_url('c_jadwal_seminar');?>"><div class="menu" style="left: 1000px">
                 <icon></icon>
                 <title-icon>Jadwal<br>Seminar KP</title-icon>
             </div><a>

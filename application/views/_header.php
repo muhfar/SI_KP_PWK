@@ -1,5 +1,6 @@
 <header class="site-header">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+
     <style>
         .nav {
             position: fixed;
@@ -35,7 +36,9 @@
         <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;
             padding :0 5rem 0 5rem !important">
 
-            <a href="#"><img src="<?php echo base_url('assets/images/logo_itera.png')?>" 
+
+            <a href="<?php echo base_url();?>"><img src="<?php echo base_url('assets/images/logo_itera.png')?>" 
+
                 style="margin : 10;height: 70px; width: 58px; "></a>
                 
         </div>
@@ -43,7 +46,8 @@
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
             <li><a href="<?php echo base_url();?>">HOME</a></li>
             <li><a href="<?php echo base_url('c_faq');?>">FAQ</a></li>
-            <li ><a href="#">SIGN IN</a></li>
+            <li><a href="<?php echo base_url('c_login');?>">SIGN IN</a></li>
+
         </ul>
     </div>
 </header>

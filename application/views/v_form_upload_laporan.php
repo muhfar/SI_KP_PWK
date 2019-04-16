@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>SI KP PWK</title>
+      
         <link rel="stylesheet" href="assets/css/style.css">
         <link href='<?php echo base_url('assets/css/dropzone.css'); ?>' type='text/css' rel='stylesheet'>
     	<script src='<?php echo base_url("assets/js/dropzone.js") ?>' type='text/javascript'></script>
