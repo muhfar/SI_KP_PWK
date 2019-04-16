@@ -24,8 +24,6 @@
 		    .dz-message{
 		      text-align: center;
 		      font-size: 28px;
-
-
 		    }
 		    .submitBtn{
 		      position: absolute;
@@ -62,7 +60,7 @@
 		        </div>
 		    </form>
 		    <div>
-		        <button type="submit" id="submit-all"> upload </button>
+		        <button type="submit" id="submit-all">submit</button>
 		    </div>
 		</div>
             <!-- <div align="center">

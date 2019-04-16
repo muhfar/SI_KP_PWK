@@ -11,7 +11,7 @@
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header_login');?>
+        <?php $this->load->view('_header_admin');?>
 
         <!--BANNER-->
         <section class="banner" 
@@ -24,7 +24,7 @@
         <section class="container-fluid">
             <a href="#"><div class="menu">
                 <icon></icon>
-                <title-icon>Alur<br>Pendaftaran KP</title-icon>
+                <title-icon>Daftar<br>Mahasiswa</title-icon>
             </div></a>
 
             <a href="#"><div class="menu" style="left: 403px">
@@ -32,34 +32,15 @@
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
             </div></a>
 
-            <a href="<?php echo base_url('c_info_instansi');?>"><div class="menu" style="left: 697px">
+            <a href="#"><div class="menu" style="left: 697px">
                 <icon></icon>
-                <title-icon>Info<br>Instansi</title-icon>
+                <title-icon>Berkas<br>Laporan KP</title-icon>
             </div></a>
 
-            <a href="<?php echo base_url('c_jadwal_seminar');?>"><div class="menu" style="left: 1000px">
+            <a href="#"><div class="menu" style="left: 1000px">
                 <icon></icon>
                 <title-icon>Jadwal<br>Seminar KP</title-icon>
             </div></a>
         </section>
-
-        <!--POST-->
-        <section class="container-fluid">
-            <!--ALUR KP-->
-            <div class="post">
-                <pict-post style="left:72px"></pict-post>    
-                <title-post>Alur Pendaftaran<br>Kerja Praktik</title-post>
-            </div>
-
-            <!--PENYEBARAN MAHASISWA KP-->    
-            <div class="post" style="top:1250px; padding-bottom:50px">
-                <title-post style="left:72px; top:1250px">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
-                <pict-post style="left:580px; top:1250px"></pict-post>    
-            </div>
-        </section>
-
-        <!--FOOTER-->
-        <?php $this->load->view('_footer');?>
-
     </body>
 </html>
