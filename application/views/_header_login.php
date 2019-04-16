@@ -1,5 +1,6 @@
 <header class="site-header">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+
     <style>
         .nav {
             position: fixed;

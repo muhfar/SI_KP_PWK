@@ -7,6 +7,7 @@
         
         <title>SI KP PWK</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+
     </head>
     <body>
         <!--LOAD HEADER-->
@@ -58,6 +59,7 @@
         </section>
 
         <!--FOOTER-->
-        <!--<?php $this->load->view('_footer');?>-->
+        <?php $this->load->view('_footer');?>
+
     </body>
 </html>
