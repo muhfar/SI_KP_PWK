@@ -39,19 +39,34 @@
 
         <!--FORM UPLOAD LAPORAN-->
         <title-page>Form Upload<br>Laporan Kerja Praktik</title-page>
-        <div class="form">
+        <!-- <div class="form">
             <label>Laporan : </label>
-            <div class='form_upload'>
-			  <!-- Dropzone -->
-		      <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" class="dropzone" id="fileUpload">   	
-		      	<p class="dz-message text-center">Tekan atau Tarik Kesini!</p>
-		      	<!-- <input type="button" name="Cancel" value="Cancel"> -->
+            <div class='form_upload'> -->
+			  <!-- Dropzone
+		      <form action="" enctype="multipart/form-data" >   	
+		      	<div class="dropzone" id="fileUpload">
+		      		<p class="dz-message text-center">Tekan atau Tarik Kesini!</p>
+		      	</div>
+		      	<br>
+		      	<button type="submit" id="submit">Upload</button>
 		      </form> 
+		    </div> -->
+            <div class="form_upload">
+            	
+             <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" method="POST">		        
+		        <div class="dropzone" id="mydropzone" name="mainFileUploader">
+		            <div class="fallback">
+		                <input name="file" type="file"/>
+		            </div>
+		        </div>
+		    </form>
+		    <div>
+		        <button type="submit" id="submit-all"> upload </button>
 		    </div>
-            
-            <div align="center">
+		</div>
+            <!-- <div align="center">
             	<button type="button" class="submitBtn" id="submit">Upload</button>
-            </div>
+            </div> -->
             
         </div>
 
@@ -61,41 +76,74 @@
         <?php $this->load->view('_footer');?>
 	
 	<script>
-		$(document).ready(function(){
+	Dropzone.options.mydropzone = {
+            url: "<?php echo base_url('c_upload_laporan/fileUpload'); ?>",
+            autoProcessQueue: false,
+            maxFiles: 1,
+            maxFilesize: 1,
+            acceptedFiles: 'application/pdf',
+
+            init: function () {
+
+                var submitButton = document.querySelector("#submit-all");
+                var wrapperThis = this;
+
+                submitButton.addEventListener("click", function () {
+                    wrapperThis.processQueue();   
+
+                    if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0){
+		    			this.removeAllFiles();
+				   		alert("success");				   		
+		    		}else{
+		    			alert("no file");
+		    		}                 
+                });
+
+                this.on("addedfile", function (file) {
+ 				console.log(file);
+                    // Create the remove button
+                    var removeButton = Dropzone.createElement("<button class='btn btn-lg dark'>Remove File</button>");
+
+                    // Listen to the click event
+                    removeButton.addEventListener("click", function (e) {
+                        // Make sure the button click doesn't submit the form:
+                        e.preventDefault();
+                        e.stopPropagation();
 
 
-		Dropzone.options.fileUpload = {
-		  autoProcessQueue: false,
-		  acceptedFiles: 'application/pdf',
-		  maxFiles: 1,
-		  maxFilesize: 10,
-		  addRemoveLinks: true,
-		  init: function() {
-		  	var submitBtn = document.querySelector(#submit);
-				    
-				   
+                        // Remove the file preview.
+                        wrapperThis.removeFile(file);
+                        // If you want to the delete the file on the server as well,
+                        // you can do the AJAX request here.
+                    });
 
-		  	this.on("complete", function(file) { 
-		    	this.removeAllFiles();
-		    	alert("complete");
-		    });
-		    // this.on("success", function(file) { 
-		    // 	alert("Added file."); 
-		    // });
-		    this.on("error", function(file) { 
-		    	alert("File error"); 
-		    	this.removeFile(file);
-		    });
+                    // Add the button to the file preview element.
+                    file.previewElement.appendChild(removeButton);
 
-		    this.on("maxfilesexceeded", function(file) { 
-		    	alert("maxfilesexceeded file."); 
-		    	this.removeFile(file);
-		    });		    
-		  }
-		  
-		  
-		};
-});
+
+                });
+
+                this.on("error", function(file) { 
+			    	alert("File error"); 
+			    	this.removeFile(file);
+		    	});
+
+		    	this.on("success", function(file) { 
+		    		if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0){
+		    			this.removeAllFiles();
+				   		alert("success");				   		
+		    		}
+				   	
+
+
+			   	});
+
+
+                
+            }
+        };
+
+			
     </script>
 
 
