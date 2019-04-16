@@ -10,6 +10,12 @@
         <link href='<?php echo base_url('assets/css/dropzone.css'); ?>' type='text/css' rel='stylesheet'>
     	<script src='<?php echo base_url("assets/js/dropzone.js") ?>' type='text/javascript'></script>
 
+		<script>
+			// Add restrictions
+			Dropzone.options.fileupload = {
+					maxFilesize: 10 // MB
+			};
+		</script>
 		<style>
     		.form_upload{
 		      padding: 5px;
@@ -23,7 +29,7 @@
 		    .dz-message{
 		      text-align: center;
 		      font-size: 28px;
-		    }
+				}
 		</style>
     </head>
     <body>
@@ -36,12 +42,12 @@
             <label>Laporan : </label>
             <div class='form_upload'>
 			  <!-- Dropzone -->
-		      <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" class="dropzone" id="fileUpload">   	
-		      	<p class="dz-message text-center">Tekan atau Tarik Kesini!</p>
-		      	<!-- <input type="button" name="Cancel" value="Cancel"> -->
-		      </form> 
+				<div class='content'>
+		<!-- Dropzone -->
+	   	<form action="<?= base_url('c_upload_laporan/fileupload') ?>"style="border : 4px dashed cornflowerblue;" class="dropzone" id='fileupload'>
+	   	</form> 
+	</div> 
 		    </div>
-            <rect></rect> 
             <a href="#"><tombol>
                 <p>Upload</p>
             </tombol></a>
