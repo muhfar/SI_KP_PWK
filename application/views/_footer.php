@@ -1,4 +1,4 @@
-<header class="site-header">
+<footer class="site-footer">
     <style>
         .footer {
             position: fixed;
@@ -17,4 +17,4 @@
         <p>Footer</p>
     </div>
 
-</header>
+</footer>
