@@ -54,7 +54,7 @@
 		    </div> -->
             <div class="form_upload">
             	
-             <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" method="POST">		        
+             <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" style = "border : 4px dashed rgba(7,0,70,1);"method="POST">		        
 		        <div class="dropzone" id="mydropzone" name="mainFileUploader">
 		            <div class="fallback">
 		                <input name="file" type="file"/>
@@ -62,7 +62,7 @@
 		        </div>
 		    </form>
 		    <div>
-		        <button type="submit" id="submit-all"> upload </button>
+		        <button type="submit" style="color:white" id="submit-all"> upload </button>
 		    </div>
 		</div>
             <!-- <div align="center">
