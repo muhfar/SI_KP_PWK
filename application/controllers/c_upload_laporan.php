@@ -45,6 +45,10 @@ class c_upload_laporan extends CI_Controller {
 			if($this->upload->do_upload('file')){
 				$data = $this->upload->data();	
 				echo '<script>alert("You Have Successfully upload this Record!");</script>';
+
+				//upload model
+				$this->load->model('m_upload');
+				$this->m_upload->uploadLaporan($data);
 				
 			}
 		}else{

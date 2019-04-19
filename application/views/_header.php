@@ -32,6 +32,8 @@
             background-color: white; }
     </style>
 
+    
+
     <div class="container-fluid" style="background-color: rgb(255, 255, 255)">
         <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;
             padding :0 5rem 0 5rem !important">
@@ -45,8 +47,18 @@
 
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
             <li><a href="<?php echo base_url();?>">HOME</a></li>
+            <!-- <div class="dropdown">
+            <li class="dropbtn"><button class="dropbtn">UPLOAD</button>
+                <div class="dropdown-content">
+                    <a href="<?php echo base_url('c_upload_surat'); ?>">Upload Surat Pengantar</a>
+                    <a href="<?php echo base_url('c_upload_laporan'); ?>">Upload Laporan</a>
+                </div>
+            </li>
+
+            </div> -->
             <li><a href="<?php echo base_url('c_faq');?>">FAQ</a></li>
             <li><a href="<?php echo base_url('c_login');?>">SIGN IN</a></li>
+            <li><a href="<?php echo base_url('c_login/Keluar');?>">SIGN OUT</a></li>
 
         </ul>
     </div>

@@ -82,7 +82,7 @@
                 </div>
             </li>
             <li><a href="#">FAQ</a></li>
-            <li ><a href="#">SIGN OUT</a></li>
+            <li ><a href="<?php echo base_url('c_login/Keluar'); ?>">LOGOUT</a></li>
         </ul>
     </div>
 </header>

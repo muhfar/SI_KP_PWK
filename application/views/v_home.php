@@ -13,6 +13,18 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('_header');?>
 
+        <!-- SESSION -->
+        <?php $nama = $this->session->userdata('nama_pengguna');
+
+        if($nama == ""){
+            echo "<script>alert('Anda Belum Dapat Mengunggah')</script>";
+        }else{
+            $this->load->view('v_home_login');
+            echo "<script>alert('Anda Dapat Mengunggah')</script>";
+        }
+
+        ?>
+
         <!--BANNER-->
         <section class="banner" 
             style="background-image: url(<?php echo base_url('assets/images/plano_img.png')?>); background-size: 700px;">
