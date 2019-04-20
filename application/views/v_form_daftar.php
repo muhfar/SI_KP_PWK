@@ -29,80 +29,80 @@
         <br>
         <br>
         <br>
-        <label for="fullname">
-            <b type="normal">Nama : </b>
-		</label>
-        <input type="text" style="padding-left:50px" placeholder="Enter Your Full Name" name="fullname" required>
+        <label for="fullname" style="margin-left:10%">
+            <b type="normal">Nama </b>
+        </label>
+        <input type="text" style="padding-left:20px; padding-right:20px; margin-left:195px; width:500px" name="fullname" required>
 
         <br><br>
 
-        <label for="nim">
-            <b type="normal">NIM : </b>
+        <label for="nim" style="margin-left:10%">
+            <b type="normal">NIM </b>
 		</label>
-        <input type="number" placeholder="   Enter Your NIM" name="nim" required>
+        <input type="text" style="padding-left:20px; padding-right:20px; margin-left:220px; width:500px" name="nim" required>
 
         <br><br>
 
-        <label for="alamat">
-            <b type="normal">Alamat : </b>
+        <label for="alamat" style="margin-left:10%">
+            <b type="normal">Alamat </b>
 		</label>
-        <input type="text" placeholder="   Enter Your Address" name="alamat" required>
+        <input type="text" style="padding-left:20px; padding-right:20px; margin-left:185px; width:500px" name="alamat" required>
 
         <br><br>
 
-        <label for="email">
-            <b type="normal">E-mail : </b>
+        <label for="email" style="margin-left:10%">
+            <b type="normal">E-mail </b>
 		</label>
-        <input type="email" placeholder="   Enter Your Email" name="email" required>
+        <input type="email" style="padding-left:20px; padding-right:20px; margin-left:195px; width:500px" name="email" required>
 
         <br><br>
 
-        <label for="notlpn">
-            <b type="normal">No. Telepon : </b>
+        <label for="notlpn" style="margin-left:10%">
+            <b type="normal">No. Telepon </b>
 		</label>
-        <input type="text" placeholder="   Enter Your Phone Number" name="noetlpn" required>
+        <input type="text" style="padding-left:20px; padding-right:20px; margin-left:145px; width:500px" name="noetlpn" required>
 
         <br><br>
 
-        <label for="instansi-nama">
-            <b type="normal">Nama Instansi : </b>
+        <label for="instansi-nama" style="margin-left:10%">
+            <b type="normal">Nama Instansi </b>
 		</label>
-        <input type="text" placeholder=" " name="instansi-nama" required>
+        <input type="text" style="padding-left:20px; padding-right:20px; margin-left:120px; width:500px" name="instansi-nama" required>
 
         <br><br>
 
-        <label for="instansi-alamat">
-            <b type="normal">Alamat Instansi : </b>
+        <label for="instansi-alamat" style="margin-left:10%">
+            <b type="normal">Alamat Instansi </b>
 		</label>
-        <input type="text" placeholder=" " name="instansi-alamat" required>
+        <input type="text" style="padding-left:20px; padding-right:20px; margin-left:110px; width:500px" name="instansi-alamat" required>
 
         <br><br>
 
-        <label for="instansi-notlpn">
-            <b type="normal">No. Telepon Instansi : </b>
+        <label for="instansi-notlpn" style="margin-left:10%">
+            <b type="normal">No. Telepon Instansi </b>
 		</label>
-        <input type="text" placeholder="   Enter Your Email or Username" name="instansi-notlpn" required>
+        <input type="text" style="padding-left:20px; padding-right:20px; margin-left:70px; width:500px" name="instansi-notlpn" required>
 
         <br><br>
 
-        <label for="tanggal-kp-mulai">
-            <b type="normal">Tanggal Kerja Praktik Mulai: </b>
-		</label>
-        <input type="date" name="tanggal-kp-mulai" required>
+        <label for="tanggal-kp-mulai" style="margin-left:10%">
+            <b type="normal">Tanggal Kerja Praktik Mulai </b>
+        </label>
+        <input type="date" style="padding-left:20px; padding-right:20px; margin-left:0px; width:155px" name="tanggal-kp-mulai" required>
 
         <br><br>
 
-        <label for="tanggal-kp-akhir">
-            <b type="normal">Tanggal Kerja Praktik Akhir: </b>
+        <label for="tanggal-kp-akhir" style="margin-left:10%">
+            <b type="normal">Tanggal Kerja Praktik Akhir </b>
 		</label>
-        <input type="date" name="tanggal-kp-Akhir" required>
+        <input type="date" style="padding-left:20px; padding-right:20px; margin-left:3px; width:155px" name="tanggal-kp-Akhir" required>
 
         <br>
         <br>
         <br>
 
-        <button type="submit">
-			<b type="signin">Daftar</b>
+        <button type="submit" sytle="margin-left:500px">
+			<b type="submit">Daftar</b>
 		</button>
 
     </body>

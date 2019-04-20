@@ -24,24 +24,24 @@
 					<br>
 
 					<label for="uname" style="top:50px">
-						<b type="normal"> Username : </b>
+						<b type="normal"> Username </b>
 					</label>
-					<input type="text" placeholder="   Enter Your Email or Username" name="uname" required>
+					<input type="text" style="padding-left:20px" placeholder="Enter Your Email or Username" name="uname" required>
 					
 					<br>
 					<br>
 					
 					<label for="pass"> 
-						<b type="normal"> Password : </b>
+						<b type="normal"> Password </b>
 					</label>
-					<input type="password" placeholder="   Enter Password" name="pass" required>
+					<input type="password" style="padding-left:20px" placeholder="Enter Password" name="pass" required>
 					
 					<br>
 					<br>
 					<br>
 					
 					<button type="submit">
-						<b type="signin">Sign In</b>
+						<b type="submit">Sign In</b>
 					</button>
 				</div>
 		</div>
