@@ -24,8 +24,6 @@
 		    .dz-message{
 		      text-align: center;
 		      font-size: 28px;
-
-
 		    }
 		    .submitBtn{
 		      position: absolute;

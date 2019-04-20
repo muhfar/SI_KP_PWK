@@ -17,7 +17,7 @@
 
         <!--JADWAL SEMINAR-->
         <!--ini masih belum selesaiiii-->
-        <table class="paleBlueRows">
+        <table class="paleBlueRows" style="margin-top:200px; margin-left:50px">
             <thead>
                 <tr>
                     <th>Nama</th>
