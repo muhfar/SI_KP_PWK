@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             height : 50px;
-            left: 925px;
+            left: 200px;
             top: 15px;
             overflow: hidden; }
             .nav li {
@@ -18,17 +18,17 @@
                 font-family: Poppins;
                 font-style: normal;
                 font-size: 19 px;
-                padding: 20px; }
+                padding: 20px 10px; }
             .nav li a {
                 display: block;
                 color: rgb(7, 0, 70);
                 text-align: center;
-                padding: 10px 16px; 
+                padding: 5px 5px; 
                 text-decoration: none; }
             .nav li a:hover {
                 background-color: antiquewhite; }
         .container-fluid {
-            max-width: 1600px;
+            max-width: 100%;
             background-color: white; }
     </style>
 
@@ -44,7 +44,11 @@
         </div>
 
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
-            <li><a href="<?php echo base_url();?>">HOME</a></li>
+            <li><a href="<?php echo base_url('c_home_admin');?>">HOME</a></li>
+            <li><a href="<?php echo base_url('c_admin_daftarmhs');?>">DAFTAR MAHASISWA</a></li>
+            <li><a href="<?php echo base_url('c_admin_penyebaran');?>">PENYEBARAN KERJA PRAKTIK</a></li>
+            <li><a href="<?php echo base_url('c_admin_berkas');?>">BERKAS KERJA PRAKTIK</a></li>
+            <li><a href="<?php echo base_url('c_admin_jadwal');?>">JADWAL SEMINAR</a></li>
             <li><a href="#">SIGN OUT</a></li>
 
         </ul>

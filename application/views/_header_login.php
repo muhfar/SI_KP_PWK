@@ -23,7 +23,7 @@
                 display: block;
                 color: rgb(7, 0, 70);
                 text-align: center;
-                padding: 10px 16px; 
+                padding: 5px 16px; 
                 text-decoration: none; }
             .nav li a:hover {
                 background-color: antiquewhite; }

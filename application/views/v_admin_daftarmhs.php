@@ -11,7 +11,7 @@
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header');?>
+        <?php $this->load->view('_header_admin');?>
 
         <title-page>Jadwal Seminar Kerja Praktik</title-page>
 
@@ -22,9 +22,10 @@
                 <tr>
                     <th>Nama</th>
                     <th>NIM</th>
-                    <th>Waktu</th>
-                    <th>Ruangan</th>
-                    <th>Penguji</th>
+                    <th>Instansi</th>
+                    <th>Alamat Instansi</th>
+                    <th>Tanggal KP</th>
+                    <th>Angkatan</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +35,7 @@
                     <td>cell3_1</td>
                     <td>cell4_1</td>
                     <td>cell5_1</td>
+                    <td>cell6_1</td>
                 </tr>
                 <tr>
                     <td>cell1_2</td>
@@ -41,6 +43,7 @@
                     <td>cell3_2</td>
                     <td>cell4_2</td>
                     <td>cell5_2</td>
+                    <td>cell6_2</td>
                 </tr>
                 <tr>
                     <td>cell1_3</td>
@@ -48,6 +51,7 @@
                     <td>cell3_3</td>
                     <td>cell4_3</td>
                     <td>cell5_3</td>
+                    <td>cell6_3</td>
                 </tr>
                 <tr>
                     <td>cell1_4</td>
@@ -55,6 +59,7 @@
                     <td>cell3_4</td>
                     <td>cell4_4</td>
                     <td>cell5_4</td>
+                    <td>cell6_4</td>
                 </tr>
                 <tr>
                     <td>cell1_5</td>
@@ -62,6 +67,7 @@
                     <td>cell3_5</td>
                     <td>cell4_5</td>
                     <td>cell5_5</td>
+                    <td>cell6_5</td>
                 </tr>
             </tbody>
         </table>
