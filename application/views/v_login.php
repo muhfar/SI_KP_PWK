@@ -19,6 +19,9 @@
 					<br>
 					<br>
 					<br>
+					<br>
+					<br>
+					<br>
 
 					<label for="uname" style="top:50px">
 						<b type="normal"> Username : </b>
@@ -26,12 +29,15 @@
 					<input type="text" placeholder="   Enter Your Email or Username" name="uname" required>
 					
 					<br>
+					<br>
 					
 					<label for="pass"> 
 						<b type="normal"> Password : </b>
 					</label>
 					<input type="password" placeholder="   Enter Password" name="pass" required>
 					
+					<br>
+					<br>
 					<br>
 					
 					<button type="submit">
