@@ -11,28 +11,20 @@ class M_Login extends CI_model{
 
 		$query = $this->db->get('pengguna');	
 
-
 		if($query->num_rows()>0)
 		{
 			foreach ($query->result() as $row) {
 				$sess = array(	'NIM'			=> $row->NIM,
 							  	'nama_pengguna' => $row->nama_pengguna);
 
-
 				$this->session->set_userdata($sess);
-				
 
 				return 1;
-
-
 			}
 		}
 		else
 		{
-
-			return 0;
-			
-			
+			return 0;				
 		}
 	}	
 }
