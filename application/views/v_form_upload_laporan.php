@@ -24,9 +24,6 @@
 		    .dz-message{
 		      text-align: center;
 		      font-size: 28px;
-
-
-		    }		    
 		</style>
     </head>
     <body>

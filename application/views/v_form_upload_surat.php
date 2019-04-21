@@ -44,7 +44,7 @@
             <label>Laporan : </label>
             <rect></rect> 
             <a href="#"><tombol>
-                <p>Upload</p>
+                <p>Submit</p>
             </tombol></a>
             
         </div>-->
