@@ -26,12 +26,7 @@
 		      font-size: 28px;
 
 
-		    }
-		    .submitBtn{
-		      position: absolute;
-			  left: 469px;
-			  top: 528px;
-		    }
+		    }		    
 		</style>
     </head>
     <body>
@@ -40,39 +35,21 @@
 
         <!--FORM UPLOAD LAPORAN-->
         <title-page>Form Upload<br>Laporan Kerja Praktik</title-page>
-        <!-- <div class="form">
-            <label>Laporan : </label>
-            <div class='form_upload'> -->
-			  <!-- Dropzone
-		      <form action="" enctype="multipart/form-data" >   	
-		      	<div class="dropzone" id="fileUpload">
-		      		<p class="dz-message text-center">Tekan atau Tarik Kesini!</p>
-		      	</div>
-		      	<br>
-		      	<button type="submit" id="submit">Upload</button>
-		      </form> 
-		    </div> -->
-            <div class="form_upload">
-            	
-             <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" style = "border : 4px dashed rgba(7,0,70,1);"method="POST">		        
-		        <div class="dropzone" id="mydropzone" name="mainFileUploader">
-		            <div class="fallback">
-		                <input name="file" type="file"/>
-		            </div>
-		        </div>
-		    </form>
-		    <div>
-		        <button type="submit" style="color:white" id="submit-all"> upload </button>
+       
+            <div class="form_upload">     
+                <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" style = "border : 4px dashed rgba(7,0,70,1);"method="POST">		        
+    		        <div class="dropzone" id="mydropzone" name="mainFileUploader">
+    		            <div class="fallback">
+    		                <input name="file" type="file"/>
+    		            </div>
+    		        </div>
+    		    </form>
+    		    <div>
+    		        <button type="submit" style="color:white" id="submit-all"> upload </button>
+    		    </div>
 		    </div>
-		</div>
-            <!-- <div align="center">
-            	<button type="button" class="submitBtn" id="submit">Upload</button>
-            </div> -->
             
-        </div>
 
-
-	
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
 	
@@ -90,14 +67,7 @@
                 var wrapperThis = this;
 
                 submitButton.addEventListener("click", function () {
-                    wrapperThis.processQueue();   
-
-                    if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0){
-		    			this.removeAllFiles();
-				   		alert("success");				   		
-		    		}else{
-		    			alert("no file");
-		    		}                 
+                    wrapperThis.processQueue();                                      
                 });
 
                 this.on("addedfile", function (file) {
@@ -120,27 +90,19 @@
 
                     // Add the button to the file preview element.
                     file.previewElement.appendChild(removeButton);
-
-
                 });
 
-                this.on("error", function(file) { 
-			    	alert("File error"); 
-			    	this.removeFile(file);
-		    	});
+                    this.on("error", function(file) { 
+    			    	alert("File error"); 
+    			    	this.removeFile(file);
+    		    	});
 
-		    	this.on("success", function(file) { 
-		    		if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0){
-		    			this.removeAllFiles();
-				   		alert("success");				   		
-		    		}
-				   	
-
-
-			   	});
-
-
-                
+    		    	this.on("success", function(file) { 
+       		    		if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0){
+       		    			this.removeAllFiles();
+       				   		alert("success");	
+        		    	}
+	       		   	});
             }
         };
 

@@ -24,38 +24,44 @@ class c_upload_laporan extends CI_Controller {
 	   parent::__construct();
 	   $this->load->helper(array('form','url'));
 	}
+
 	public function index()
 	{
 		$this->load->view('v_form_upload_laporan');
 	}
+
 	public function fileUpload(){
 		$this->load->helper(array('form','url'));
 
-		//setting upload
-		$config['upload_path']		= './upload/laporan/';
-		$config['allowed_types']	= 'pdf';
-		$config['max_size']			= 1024;
-		$config['encrypt_name'] 	= TRUE;
+		$user = $this->session->userdata('NIM');
 
-		//load config
-		$this->load->library('upload',$config);
-
-		if(!empty($_FILES['file']['name'])){			
+		if(!empty($_FILES['file']['name'])){	
+			//setting upload
+			$config['upload_path']		= './upload/laporan/';
+			$config['allowed_types']	= 'pdf';
+			$config['max_size']			= 1024;
+			$config['encrypt_name'] 	= TRUE;
+			//load config
+			$this->load->library('upload',$config);
+			
 			//upload file
 			if($this->upload->do_upload('file')){
 				$data = $this->upload->data();	
-				echo '<script>alert("You Have Successfully upload this Record!");</script>';
+
+				//datadb for database
+				$datadb['nim'] 		= $user;
+				$datadb['laporan'] 	= $data['file_name'];
 
 				//upload model
 				$this->load->model('m_upload');
-				$this->m_upload->uploadLaporan($data);
-				
+				$this->m_upload->uploadLaporan($datadb);
+							
+				echo '<script>alert("You Have Successfully upload this Record!")</script>';
 			}
 		}else{
-			echo "<script>alert('tidak ada file');</script>";
+			echo "<script>alert('tidak ada file')</script>";
 		}
 
-		// redirect(base_url('c_upload_laporan'), 'refresh');	
 	}
 
 }

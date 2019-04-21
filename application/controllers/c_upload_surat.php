@@ -10,26 +10,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		public function fileUpload(){
 		$this->load->helper(array('form','url'));
 
-		//setting upload
-		$config['upload_path']		= './upload/pendaftaran/';
-		$config['allowed_types']	= 'pdf';
-		$config['max_size']			= 1024;
-		$config['encrypt_name'] 	= TRUE;
+		$user = $this->session->userdata('NIM');
 
-		//load config
-		$this->load->library('upload',$config);
+		if(!empty($_FILES['file']['name'])){	
+			//setting upload
+			$config['upload_path']		= './upload/surat/';
+			$config['allowed_types']	= 'pdf';
+			$config['max_size']			= 1024;
+			$config['encrypt_name'] 	= TRUE;	
+			//load config
+			$this->load->library('upload',$config);
 
-		if(!empty($_FILES['file']['name'])){			
 			//upload file
 			if($this->upload->do_upload('file')){
 				$data = $this->upload->data();	
-				echo '<script>alert("You Have Successfully upload this Record!");</script>';
+
+				//datadb for database
+				$datadb['id_berkas'] 	= $user;
+				$datadb['surat'] 		= $data['file_name'];
+				$datadb['laporan']		= "";
+
+				//upload model
+				$this->load->model('m_upload');
+				$this->m_upload->uploadSurat($datadb);
 				
 			}
-		}else{
-			echo "<script>alert('tidak ada file');</script>";
 		}
-
-		// redirect(base_url('c_upload_laporan'), 'refresh');	
 	}
 }
