@@ -15,43 +15,42 @@
 
         <title-page>Jadwal Seminar Kerja Praktik</title-page>
 
-        <!--JADWAL SEMINAR-->
-        <!--ini masih belum selesaiiii-->
-        <table class="paleBlueRows" style="margin-top:200px; margin-left:50px">
+        <!--Search Bar-->
+        <div class="searchbar" style = "top:250px">
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
+        <table class="paleBlueRows" style="margin-top:300px; margin-left:50px">
             <thead>
                 <tr>
                     <th>Nama</th>
                     <th>NIM</th>
-                    <th>Berkas</th>
+                    <th>Laporan</th>
+                    <th>Surat  </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>cell1_1</td>
-                    <td>cell2_1</td>
-                    <td>cell3_1</td>
-                </tr>
-                <tr>
-                    <td>cell1_2</td>
-                    <td>cell2_2</td>
-                    <td>cell3_2</td>
-                </tr>
-                <tr>
-                    <td>cell1_3</td>
-                    <td>cell2_3</td>
-                    <td>cell3_3</td>
-                </tr>
-                <tr>
-                    <td>cell1_4</td>
-                    <td>cell2_4</td>
-                    <td>cell3_4</td>
-                </tr>
-                <tr>
-                    <td>cell1_5</td>
-                    <td>cell2_5</td>
-                    <td>cell3_5</td>
-                </tr>
-            </tbody>
+                <?php
+                    foreach ($query->result() as $row) {
+                        echo "<tr>";
+                            echo "<td>";
+                                echo $row->nama_pengguna;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->id_berkas;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->file_pendaftaran;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->laporan;
+                            echo "</td>";
+                        echo "</tr>";
+                    }
+
+                ?>
         </table>
 
         <!--FOOTER-->

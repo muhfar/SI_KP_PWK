@@ -7,7 +7,6 @@
         
         <title>SI KP PWK</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
-
     </head>
     <body>
         <!--LOAD HEADER-->
@@ -15,9 +14,17 @@
 
         <title-page>Jadwal Seminar Kerja Praktik</title-page>
 
+        <!--Search Bar-->
+        
+        <div class="searchbar" style = "top:250px">
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
         <!--JADWAL SEMINAR-->
         <!--ini masih belum selesaiiii-->
-        <table class="paleBlueRows" style="margin-top:200px; margin-left:50px">
+        <table class="paleBlueRows" style="margin-top:300px; margin-left:50px">
             <thead>
                 <tr>
                     <th>Waktu</th>

@@ -26,7 +26,7 @@
                 padding: 5px 16px; 
                 text-decoration: none; }
             .nav li a:hover {
-                background-color: antiquewhite; }
+                background-color: #3c73c5e5; }
 
             .dropdown {
                 position: relative;

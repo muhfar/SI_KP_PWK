@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             height : 50px;
-            left: 800px;
+            left: 750px;
             top: 15px;
             overflow: hidden; }
             .nav li {
@@ -26,9 +26,9 @@
                 padding: 5px 16px; 
                 text-decoration: none; }
             .nav li a:hover {
-                background-color: antiquewhite; }
+                background-color: #3c73c5e5; }
         .container-fluid {
-            max-width: 1600px;
+            max-width: 100%;
             background-color: white; }
     </style>
 
@@ -58,7 +58,6 @@
             </div> -->
             <li><a href="<?php echo base_url('c_faq');?>">FAQ</a></li>
             <li><a href="<?php echo base_url('c_login');?>">SIGN IN</a></li>
-            <li><a href="<?php echo base_url('c_login/Keluar');?>">SIGN OUT</a></li>
 
         </ul>
     </div>

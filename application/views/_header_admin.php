@@ -26,7 +26,7 @@
                 padding: 5px 5px; 
                 text-decoration: none; }
             .nav li a:hover {
-                background-color: antiquewhite; }
+                background-color: #3c73c5e5; }
         .container-fluid {
             max-width: 100%;
             background-color: white; }

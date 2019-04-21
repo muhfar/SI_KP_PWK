@@ -15,9 +15,23 @@
 
         <title-page>Jadwal Seminar Kerja Praktik</title-page>
 
+        <!--Search Bar-->
+        <div class="searchbar" style = "top:250px; left:50%" >
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            
+        </div>
+        <!--Tombol Edit-->
+        <div id = "EditBtn" class= "editbtn"  style="top:275px; left:70%;">
+            <button type="submit" style="color:white; width:20%; heigth:10% ; right:50px" onclick="showDiv()" id="submit-all"> Edit </button>
+        </div>
+        <div id = "SaveBtn" class= "editbtn"  style="top:275px; left:70%; display:none;">
+            <button type="submit" style="color:white; width:20%; heigth:10% ; right:50px " onClick="window.location.reload()" id="submit-all"> Save </button>
+        </div>
+        
         <!--JADWAL SEMINAR-->
-        <!--ini masih belum selesaiiii-->
-        <table class="paleBlueRows" style="margin-top:200px; margin-left:50px">
+        <table class="paleBlueRows" style="margin-top:300px; margin-left:50px">
             <thead>
                 <tr>
                     <th>Nama</th>
@@ -26,48 +40,34 @@
                     <th>Ruangan</th>
                     <th>Penguji</th>
                 </tr>
-            </thead>
+            </thead> 
             <tbody>
-                <tr>
-                    <td>cell1_1</td>
-                    <td>cell2_1</td>
-                    <td>cell3_1</td>
-                    <td>cell4_1</td>
-                    <td>cell5_1</td>
-                </tr>
-                <tr>
-                    <td>cell1_2</td>
-                    <td>cell2_2</td>
-                    <td>cell3_2</td>
-                    <td>cell4_2</td>
-                    <td>cell5_2</td>
-                </tr>
-                <tr>
-                    <td>cell1_3</td>
-                    <td>cell2_3</td>
-                    <td>cell3_3</td>
-                    <td>cell4_3</td>
-                    <td>cell5_3</td>
-                </tr>
-                <tr>
-                    <td>cell1_4</td>
-                    <td>cell2_4</td>
-                    <td>cell3_4</td>
-                    <td>cell4_4</td>
-                    <td>cell5_4</td>
-                </tr>
-                <tr>
-                    <td>cell1_5</td>
-                    <td>cell2_5</td>
-                    <td>cell3_5</td>
-                    <td>cell4_5</td>
-                    <td>cell5_5</td>
-                </tr>
+            <tbody>
+                <?php
+                    foreach ($query->result() as $row) {
+                        echo "<tr>";
+                            echo "<td>";
+                                echo $row->tanggal;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->ruang;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->keahlian;
+                            echo "</td>";
+                        echo "</tr>";
+                    }
+
+                ?>
             </tbody>
         </table>
 
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
-
+        <script>
+            function showDiv() {
+                document.getElementById('SaveBtn').style.display = "block";
+            }
+        </script>           
     </body>
 </html>
