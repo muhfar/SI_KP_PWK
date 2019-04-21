@@ -18,43 +18,43 @@
         <!--FAQ-->
         <section class="container-fluid">
             <div class="faq">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Apakah dosen pembimbing KP atau kordinator hanya ada 1?</ques>
+                <ans>Untuk saat ini dosen kordinator KP hanya Pak Asirin S.T, M.T. Namun kedepannya mahasiswa dapat memilih coordinator KP sesuai dengan keahlian dosen yang ada</ans>
             </div>
 
             <div class="faq" style="top:335px">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Berapa banyak maksimal dalam 1 kelompok KP?</ques>
+                <ans>Untuk 1 kelompok maksimal 3 orang perkelompok</ans>
             </div>
 
             <div class="faq" style="top:463px">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Apakah diperbolehkan dalam 1 perusahaan ada 2 kelompok atau lebih?</ques>
+                <ans>Tidak dianjurkan, namun jika mendapatkan persetujuan dari perusahaan dan dibidang keahlian yang beda maka dipersilaahkan</ans>
             </div>
 
             <div class="faq" style="top:591px">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Apakah diperbolehkan untuk melaksanakan KP perseorangan atau bukan dalam kelompok?</ques>
+                <ans>Jika memang mahasiswa tersebut mampu dan sanggup maka diperbolehkan, namun dari pihak program studi sangatlah tidak menganjurkan untuk melaksanakan KP perseorangan</ans>
             </div>
 
             <div class="faq" style="left:700px">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Apakah diperbolehkan untuk melaukan KP di pemerintahan?</ques>
+                <ans>Kalau memang instansi tersebut ada keterkaitan dengan ilmu yang telah dipelajari ataupun bidang keahlian yang berhubungan dengan program studi maka diperbolehkan (missal : PU, BAPPEDA, Bapenas, dsb)</ans>
             </div>
 
             <div class="faq" style="top:335px; left:700px">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Apakah ada ketentuan waktu untuk melaksanakan KP?</ques>
+                <ans>Waktu untuk KP dianjurkan dilaksanakan pada liburan semester genap ke ganjil. Dan waktu pelaksanaanya minimal 1 bulan penuh (30 hari) dan maksimal 3 bulan (90 hari)</ans>
             </div>
 
             <div class="faq" style="top:463px; left:700px">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Apakah dosen mempunyai referensi untuk mendaftar KP?</ques>
+                <ans>Untuk referensi tempat KP bisa dilihat di Sistem Informasi KP yang ada dibagian Info Instansi</ans>
             </div>
 
             <div class="faq" style="top:591px; left:700px">
-                <ques>Lorem ipsum dolor sit amet, consectetur adipi<br/>scing elit ?</ques>
-                <ans>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</ans>
+                <ques>Apakah ada format laporan KP yang telah dilaksanakan?</ques>
+                <ans>Untuk format laporan bisa dilihat di ruang prodi sebagai contoh.</ans>
             </div>
         </section>
 
