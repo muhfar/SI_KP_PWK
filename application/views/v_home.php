@@ -11,7 +11,10 @@
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header');?>
+        <div style="top:0;">
+            <?php $this->load->view('_header');?>
+        </div>
+        
 
         <!-- SESSION -->
         <?php $nama = $this->session->userdata('nama_pengguna');
@@ -64,9 +67,9 @@
             </div>
 
             <!--PENYEBARAN MAHASISWA KP-->    
-            <div class="post" style="top:1250px">
+            <div class="post" style="top:1250px;">
                 <title-post style="left:72px; top:1250px">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
-                <pict-post style="left:580px; top:1250px"></pict-post>    
+                <pict-post style="left:580px; top:1250px;"></pict-post>    
             </div>
         </section>
 

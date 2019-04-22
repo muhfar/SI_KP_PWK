@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             height : 50px;
-            left: 650px;
-            top: 15px;
+            right: 0;
+            top: 0;
             overflow: hidden; }
             .nav li {
                 float: left;
@@ -60,17 +60,15 @@
                 background-color: #3e8e41; }
                 
         .container-fluid {
-            max-width: 1600px;
+            max-width: 1700px;
             background-color: white; }
     </style>
 
-    <div class="container-fluid" style="background-color: rgb(255, 255, 255)">
-        <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;
+    <div class="container-fluid" style="background-color: rgb(0,0,0);">
+        <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%; top:0;
             padding :0 5rem 0 5rem !important">
-
             <a href="<?php echo base_url();?>"><img src="<?php echo base_url('assets/images/logo_itera.png')?>" 
-                style="margin : 10;height: 70px; width: 58px; "></a>
-                
+                style="margin :10;height: 5%; width: 5%; "></a>
         </div>
 
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
@@ -81,7 +79,7 @@
                     <a href="#">Upload Laporan</a>
                 </div>
             </li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="<?php echo base_url('c_faq_login'); ?>">FAQ</a></li>
             <li ><a href="<?php echo base_url('c_login/Keluar'); ?>">LOGOUT</a></li>
         </ul>
     </div>

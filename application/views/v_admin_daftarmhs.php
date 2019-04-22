@@ -13,7 +13,7 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('_header_admin');?>
 
-        <title-page>Jadwal Seminar Kerja Praktik</title-page>
+        <title-page>Daftar Mahasiswa Kerja Praktik</title-page>
 
         <!--JADWAL SEMINAR-->
         <!--ini masih belum selesaiiii-->

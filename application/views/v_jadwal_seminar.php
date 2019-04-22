@@ -33,7 +33,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
+                <?php 
                     foreach ($query->result() as $row) {
                         echo "<tr>";
                             echo "<td>";

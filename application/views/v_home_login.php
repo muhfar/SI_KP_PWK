@@ -32,7 +32,7 @@
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
             </div></a>
 
-            <a href="<?php echo base_url('c_info_instansi');?>"><div class="menu" style="left: 697px">
+            <a href="<?php echo base_url('c_info_instansi_login');?>"><div class="menu" style="left: 697px">
                 <icon><img src="<?php echo base_url('assets/images/ic_perusahaan.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Info<br>Instansi</title-icon>
             </div></a>

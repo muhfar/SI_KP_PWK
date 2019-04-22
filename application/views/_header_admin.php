@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             height : 50px;
-            left: 200px;
-            top: 15px;
+            right:0;
+            top: 0;
             overflow: hidden; }
             .nav li {
                 float: left;
@@ -33,11 +33,11 @@
     </style>
 
     <div class="container-fluid" style="background-color: rgb(255, 255, 255)">
-        <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;
+        <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;top:0;
             padding :0 5rem 0 5rem !important">
 
 
-            <a href="<?php echo base_url();?>"><img src="<?php echo base_url('assets/images/logo_itera.png')?>" 
+            <a href="<?php echo base_url('c_home_admin');?>"><img src="<?php echo base_url('assets/images/logo_itera.png')?>" 
 
                 style="margin : 10;height: 70px; width: 58px; "></a>
                 
@@ -45,10 +45,10 @@
 
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
             <li><a href="<?php echo base_url('c_home_admin');?>">HOME</a></li>
-            <li><a href="<?php echo base_url('c_admin_daftarmhs');?>">DAFTAR MAHASISWA</a></li>
-            <li><a href="<?php echo base_url('c_admin_penyebaran');?>">PENYEBARAN KERJA PRAKTIK</a></li>
-            <li><a href="<?php echo base_url('c_admin_berkas');?>">BERKAS KERJA PRAKTIK</a></li>
-            <li><a href="<?php echo base_url('c_admin_jadwal');?>">JADWAL SEMINAR</a></li>
+            <li><a href="<?php echo base_url('c_admin_daftarmhs');?>">MAHASISWA</a></li>
+            <li><a href="<?php echo base_url('c_admin_penyebaran');?>">PENYEBARAN KP</a></li>
+            <li><a href="<?php echo base_url('c_admin_berkas');?>">BERKAS KP</a></li>
+            <li><a href="<?php echo base_url('c_admin_jadwal');?>">SEMINAR</a></li>
             <li><a href="#">SIGN OUT</a></li>
 
         </ul>

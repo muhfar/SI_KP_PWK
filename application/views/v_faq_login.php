@@ -11,7 +11,7 @@
 
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header');?>
+        <?php $this->load->view('_header_login');?>
 
         <title-page>Frequently Asked Question</title-page>
 

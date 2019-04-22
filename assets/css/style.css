@@ -103,6 +103,9 @@ body{
         font-size: 16px;
         color: rgba(7,0,70,1);
         letter-spacing: 0.83px; }
+        .menu a:hover{
+            background-color: #3c73c5e5;
+        }
 
 .post {
     max-width: 100%;
@@ -237,7 +240,7 @@ title-page {
 		height: 163px;
 		left: 0px;
         top: 0px;
-        border: 4px dashed cornflowerblue; }
+        border: 2px dashed cornflowerblue; }
     .instansi title-instansi {
         opacity: 1;
 		position: absolute;
@@ -445,3 +448,37 @@ button[type=submit]{
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
     background-color: #d6edff;
   }
+
+.dropdown-submenu{ position: relative; }
+.dropdown-submenu>.dropdown-menu{
+  top:0;
+  left:100%;
+  margin-top:-6px;
+  margin-left:-1px;
+  -webkit-border-radius:0 6px 6px 6px;
+  -moz-border-radius:0 6px 6px 6px;
+  border-radius:0 6px 6px 6px;
+}
+.dropdown-submenu>a:after{
+  display:block;
+  content:" ";
+  float:right;
+  width:0;
+  height:0;
+  border-color:transparent;
+  border-style:solid;
+  border-width:5px 0 5px 5px;
+  border-left-color:#cccccc;
+  margin-top:5px;margin-right:-10px;
+}
+.dropdown-submenu:hover>a:after{
+  border-left-color:#555;
+}
+.dropdown-submenu.pull-left{ float: none; }
+.dropdown-submenu.pull-left>.dropdown-menu{
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
