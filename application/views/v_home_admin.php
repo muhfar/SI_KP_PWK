@@ -23,22 +23,22 @@
         <!--MENU-->
         <section class="container-fluid">
             <a href="#"><div class="menu">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_daftar.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Daftar<br>Mahasiswa</title-icon>
             </div></a>
 
             <a href="#"><div class="menu" style="left: 403px">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_penyebaran.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
             </div></a>
 
             <a href="#"><div class="menu" style="left: 697px">
-                <icon></icon>
-                <title-icon>Berkas<br>Laporan KP</title-icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_daftar.png')?>" style="width:92px; height:92px;"></icon>
+                <title-icon>Laporan<br>Kerja Praktik</title-icon>
             </div></a>
 
             <a href="#"><div class="menu" style="left: 1000px">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_jadwal.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Jadwal<br>Seminar KP</title-icon>
             </div></a>
         </section>

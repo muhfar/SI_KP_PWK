@@ -26,22 +26,22 @@
         <!--MENU-->
         <section class="container-fluid">
             <a href="#"><div class="menu">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_daftar.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Alur<br>Pendaftaran KP</title-icon>
             </div></a>
 
             <a href="#"><div class="menu" style="left: 403px">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_penyebaran.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
             </div></a>
 
             <a href="<?php echo base_url('c_info_instansi');?>"><div class="menu" style="left: 697px">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_perusahaan.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Info<br>Instansi</title-icon>
             </div></a>
 
             <a href="<?php echo base_url('c_jadwal_seminar');?>"><div class="menu" style="left: 1000px">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_jadwal.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Jadwal<br>Seminar KP</title-icon>
             </div></a>
         </section>
@@ -55,9 +55,9 @@
             </div>
 
             <!--PENYEBARAN MAHASISWA KP-->    
-            <div class="post" style="top:1250px">
+            <div class="post" style="top:1250px;">
                 <title-post style="left:72px; top:1250px">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
-                <pict-post style="left:580px; top:1250px"></pict-post>    
+                <pict-post style="left:580px; top:1250px;"></pict-post>    
             </div>
         </section>
 

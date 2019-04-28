@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             height : 50px;
-            left: 800px;
-            top: 15px;
+            right:10px;
+            top: 0;
             overflow: hidden; }
             .nav li {
                 float: left;
@@ -23,26 +23,22 @@
                 display: block;
                 color: rgb(7, 0, 70);
                 text-align: center;
-                padding: 10px 16px; 
+                padding: 5px 16px; 
                 text-decoration: none; }
             .nav li a:hover {
-                background-color: antiquewhite; }
+                background-color: #3c73c5e5; }
         .container-fluid {
-            max-width: 1600px;
+            max-width: 100%;
             background-color: white; }
     </style>
 
     
 
     <div class="container-fluid" style="background-color: rgb(255, 255, 255)">
-        <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;
+        <div class="site-logo" style="background-color: rgb(255, 255, 255); width: 100%;top:0;
             padding :0 5rem 0 5rem !important">
-
-
             <a href="<?php echo base_url();?>"><img src="<?php echo base_url('assets/images/logo_itera.png')?>" 
-
-                style="margin : 10;height: 70px; width: 58px; "></a>
-                
+                style="margin : 10;height: 70px; width: 58px; "></a>                
         </div>
 
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
@@ -58,7 +54,6 @@
             </div> -->
             <li><a href="<?php echo base_url('c_faq');?>">FAQ</a></li>
             <li><a href="<?php echo base_url('c_login');?>">SIGN IN</a></li>
-            <li><a href="<?php echo base_url('c_login/Keluar');?>">SIGN OUT</a></li>
 
         </ul>
     </div>
