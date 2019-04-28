@@ -15,7 +15,7 @@ class c_login extends CI_Controller {
 
 		if($this->m_Login->cek_login($data)){
 			echo "<script>alert('Login Successfully!')</script>";
-			$this->load->view('v_home_login');
+			redirect(base_url());
 		}else{
 			echo "<script>alert('Username atau Password tidak ditemukan!')</script>";
 			redirect(base_url('c_login'), 'refresh');
@@ -23,10 +23,10 @@ class c_login extends CI_Controller {
 	}
 
 
-	public function Keluar()
+	public function keluar()
 	{
 		$this->session->sess_destroy();
-		redirect('c_home');
+		redirect(base_url());
 	}
 
 	
