@@ -8,6 +8,6 @@ class c_admin_berkas extends CI_Controller {
 		$this->db->from('berkas');
 		$this->db->join ('pengguna','NIM = id_berkas');
 		$query['query'] =  $this->db->get();
-		$this->load->view('v_admin_berkas', $query);
+		$this->load->view('admin/v_admin_berkas', $query);
 	}
 }
