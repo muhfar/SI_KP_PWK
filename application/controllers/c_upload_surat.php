@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('v_form_upload_surat');
 		}
 
-		public function fileUpload(){
+	public function fileUpload(){
 		$this->load->helper(array('form','url'));
 
 		$user = $this->session->userdata('NIM');

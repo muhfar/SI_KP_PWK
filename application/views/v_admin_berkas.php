@@ -42,7 +42,7 @@
                                 echo $row->id_berkas;
                             echo "</td>";
                             echo "<td>";
-                                echo $row->file_pendaftaran;
+                                echo $row->surat;
                             echo "</td>";
                             echo "<td>";
                                 echo $row->laporan;

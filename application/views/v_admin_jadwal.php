@@ -47,6 +47,12 @@
                     foreach ($query->result() as $row) {
                         echo "<tr>";
                             echo "<td>";
+                                echo $row->nama_pengguna;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->NIM;
+                            echo "</td>";
+                            echo "<td>";
                                 echo $row->tanggal;
                             echo "</td>";
                             echo "<td>";
