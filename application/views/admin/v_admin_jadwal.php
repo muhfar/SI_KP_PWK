@@ -8,17 +8,19 @@
         <title>SI KP PWK</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
-        
+        <link rel="stylesheet" type="text/css" href="<? echo base_url('assets/css/all.min.css'); ?>">
+
         <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
-        <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.tabledit.js');?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/js/all.min.js');?>"></script>
+        
 
     </head>
     <body>
         <!--LOAD HEADER-->
         <?php $this->load->view('_header_admin');?>
+        <?php $this->load->view('admin/crudModal'); ?>
+        
 
         <!-- <title-page>Jadwal Seminar Kerja Praktik</title-page> -->
         <div class="title-page text-center">
@@ -42,6 +44,7 @@
                                 <th>Waktu</th>
                                 <th>Ruangan</th>
                                 <th>Keahlian</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -60,6 +63,16 @@
                                         echo "<td>";
                                             echo $row->keahlian;
                                         echo "</td>";
+                                        echo "<td>";
+                                        ?>
+                                            <a class="btn btn-icon" href="#" data-toggle="modal" data-target="#crudModal">
+                                                <span class='fas fa-pencil-alt'></span>
+                                            </a>
+                                            <a class="btn btn-icon" href="#" data-toggle="modal" data-target="#crudModal">
+                                            <span class='icon fas fa-trash-alt'></span>
+                                            </a>
+                                        <?php
+                                        echo "</td>";
                                     echo "</tr>";
                                 }
 
@@ -71,7 +84,9 @@
         </div>
     </div>
     
-        
+
+
+
 
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
@@ -81,72 +96,6 @@
             }
         </script>   
 
-        <!-- Tabledit -->
-        <script>
-        $(document).ready(function() {
-             $('#myTable').Tabledit({
-              url:'<?php echo base_url('admin/c_admin_jadwal/tabledit');?>',
-              editmethod: 'post',
-              deletemethod: 'post',
-              columns:{
-               identifier:[0, "id"],
-               editable:[[1,'Waktu'],[2, 'Ruangan'], [3, 'Keahlian']]
-              },
-              hideIdentifier: false,
-              editButton: true,
-              saveButton: true,
-              restoreButton: false,
-              successClass: 'success',
-              inputClass: 'form-control input-sm',
-              groupClass: 'btn-group btn-group-sm',
-              eventType: 'click',
-              rowIdentifier: 'id',
-              buttons: {
-                edit: {
-                    class: 'btn btn-sm btn-default',
-                    html: '<span class="fas fa-pencil-alt"></span>',
-                    action: 'edit'
-                },
-                delete: {
-                    class: 'btn btn-sm btn-default',
-                    html: '<span class="fas fa-trash-alt"></span>',
-                    action: 'delete'
-                },
-                save: {
-                    class: 'btn btn-sm btn-success',
-                    html: 'Save'
-                },
-                confirm: {
-                    class: 'btn btn-sm btn-danger',
-                    html: 'Confirm'
-                }
-            },
-            
-                onDraw: function() {
-                    console.log('onDraw()');
-                },
-                onSuccess: function(data, textStatus, jqXHR) {
-                    console.log('onSuccess(data, textStatus, jqXHR)');
-                    console.log(data);
-                    console.log(textStatus);
-                    console.log(jqXHR);
-                },
-                onFail: function(jqXHR, textStatus, errorThrown) {
-                    console.log('onFail(jqXHR, textStatus, errorThrown)');
-                    console.log(jqXHR);
-                    console.log(textStatus);
-                    console.log(errorThrown);
-                },
-                onAlways: function() {
-                    console.log('onAlways()');
-                },
-                onAjax: function(action, serialize) {
-                    console.log('onAjax(action, serialize)');
-                    console.log(action);
-                    console.log(serialize);
-                }
-            });
-        });
-        </script>
+                
     </body>
 </html>
