@@ -12,15 +12,17 @@
 
         <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/js/all.min.js');?>"></script>
         
 
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header_admin');?>
+        <?php $this->load->view('_header_admin');?>    
         <?php $this->load->view('admin/crudModal'); ?>
-        
 
         <!-- <title-page>Jadwal Seminar Kerja Praktik</title-page> -->
         <div class="title-page text-center">
@@ -41,7 +43,8 @@
                         <thead class="thead">
                             <tr>
                                 <th>id</th>
-                                <th>Waktu</th>
+                                <th>Tanggal</th>
+                                <th>Pukul</th>
                                 <th>Ruangan</th>
                                 <th>Keahlian</th>
                                 <th>Aksi</th>
@@ -55,7 +58,10 @@
                                             echo $row->id_seminar;
                                         echo "</td>";
                                         echo "<td>";
-                                            echo date("l, d-m-y h:i", strtotime($row->tanggal));
+                                            echo date("l, d-M-Y", strtotime($row->tanggal));
+                                        echo "</td>";
+                                        echo "<td>";
+                                            echo date("H:i", strtotime($row->pukul));
                                         echo "</td>";
                                         echo "<td>";
                                             echo $row->ruang;
@@ -65,10 +71,12 @@
                                         echo "</td>";
                                         echo "<td>";
                                         ?>
-                                            <a class="btn btn-icon" href="#" data-toggle="modal" data-target="#crudModal">
+                                            <button type="button" class="btn btn-icon" href="#" data-toggle="modal" data-target="#editModal" id="edit" 
+                                                data-id="<?=$row->id_seminar?>" data-tanggal="<?=$row->tanggal?>" data-pukul="<?=date("H:i", strtotime($row->pukul))?>"  data-ruang="<?=$row->ruang?>" data-keahlian="<?=$row->keahlian?>"
+                                            >
                                                 <span class='fas fa-pencil-alt'></span>
-                                            </a>
-                                            <a class="btn btn-icon" href="#" data-toggle="modal" data-target="#crudModal">
+                                            </button>
+                                            <a class="btn btn-danger" href="<?php echo site_url('admin/c_admin_jadwal/delete/'. $row->id_seminar); ?>" onclick="return confirm('Apakah Anda Ingin Menghapus Data id=<?=$row->id_seminar;?> ?');">
                                             <span class='icon fas fa-trash-alt'></span>
                                             </a>
                                         <?php
@@ -87,7 +95,7 @@
 
 
 
-
+        
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
         <script>
@@ -95,6 +103,26 @@
                 document.getElementById('SaveBtn').style.display = "block";
             }
         </script>   
+
+        <script>
+            $('#editModal').on('show.bs.modal', function (event) {
+              var button = $(event.relatedTarget)
+              //data modal
+              var id = button.data('id')
+              var tanggal = button.data('tanggal')
+              var pukul = button.data('pukul')
+              var ruang = button.data('ruang')
+              var keahlian = button.data('keahlian')
+
+              var modal = $(this)
+              modal.find('.modal-title').text('Edit jadwal id ' + id)
+              modal.find('.modal-body #id').val(id)
+              modal.find('.modal-body #tanggal').val(tanggal)
+              modal.find('.modal-body #pukul').val(pukul)
+              modal.find('.modal-body #ruang').val(ruang)
+              modal.find('.modal-body #keahlian').val(keahlian)
+            })
+        </script>
 
                 
     </body>
