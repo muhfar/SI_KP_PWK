@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class c_admin_jadwal extends CI_Controller {
 	public function index()
 	{
+		date_default_timezone_set('Asia/Jakarta');
 		$query['query'] = $this->db->select('*')->where('tanggal >= NOW()' )->order_by('tanggal', 'ASC')->get('seminar',5);
 		$this->load->view('admin/v_admin_jadwal',$query);
 	}
@@ -16,8 +17,7 @@ class c_admin_jadwal extends CI_Controller {
 		$keahlian = $this->input->post('keahlian');
 		
 		$data = array(
-			'tanggal' => $tanggal, 
-			'pukul' => $pukul, 
+			'tanggal' => $tanggal." ".$pukul,  
 			'ruang' => $ruang, 
 			'keahlian' => $keahlian, 
 		);

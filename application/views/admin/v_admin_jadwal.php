@@ -61,7 +61,7 @@
                                             echo date("l, d-M-Y", strtotime($row->tanggal));
                                         echo "</td>";
                                         echo "<td>";
-                                            echo date("H:i", strtotime($row->pukul));
+                                            echo date("H:i", strtotime($row->tanggal));
                                         echo "</td>";
                                         echo "<td>";
                                             echo $row->ruang;
@@ -72,7 +72,7 @@
                                         echo "<td>";
                                         ?>
                                             <button type="button" class="btn btn-icon" href="#" data-toggle="modal" data-target="#editModal" id="edit" 
-                                                data-id="<?=$row->id_seminar?>" data-tanggal="<?=$row->tanggal?>" data-pukul="<?=date("H:i", strtotime($row->pukul))?>"  data-ruang="<?=$row->ruang?>" data-keahlian="<?=$row->keahlian?>"
+                                                data-id="<?=$row->id_seminar?>" data-tanggal="<?=date("Y-m-d", strtotime($row->tanggal))?>" data-pukul="<?=date("H:i", strtotime($row->tanggal))?>"  data-ruang="<?=$row->ruang?>" data-keahlian="<?=$row->keahlian?>"
                                             >
                                                 <span class='fas fa-pencil-alt'></span>
                                             </button>

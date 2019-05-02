@@ -13,7 +13,7 @@
           <input type="hidden" name="id" id="id">
           <div class="form-group">
             <label>Waktu</label>
-            <input type="date" class="form-control form-modal-sm" id="tanggal" name="tanggal" required >
+            <input type="date" class="form-control form-modal-sm" id="tanggal" name="tanggal" min="<?= date('Y-m-d');?>" required>
             <input type="time" class="form-control form-modal-sm" id="pukul" name="pukul" required>
           </div>
           <div class="form-group">
