@@ -17,8 +17,6 @@ nav img{
     margin: 10px;
 }
 
-
-
 .navbar-expand-sm .navbar-nav .nav-link{
     padding: 10px 24px;
 }
@@ -49,7 +47,6 @@ nav img{
 
 .table{
     text-align: center;
-    margin-top: 30px;
 }
 
 .thead{
@@ -75,6 +72,16 @@ tr:nth-child(even) {
     letter-spacing: 0.03px; */
 }
 
+.btn:hover{
+    color: #6699ff;
+}
+
+.btn-menu{
+    color: #fff;
+    background-color: #070046;
+    width: 100px;
+    border-radius: 22px;
+}
 
 /*CRUD Modal*/
 .btn-icon{
@@ -447,17 +454,17 @@ input[type=text], input[type=password], input[type=email], input[type=date]{
     background-color: #ffffff;
 }
 
-/*Aku jadiin comment karena ganggu default bootstrap
-    Coming Soon Perbaikan
+/*
+    Perbaikan : modal -> modalLogin;
 	*/
-/*.modal {
+.modalLogin {
 	width: 677px;
 	height: 383px;
 	border-radius: 8px;
 	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
 	background-color: #ffffff;
     margin : 209px 312px; 
-}*/
+}
 				
 b[type=submit]{
 	width: 54px;

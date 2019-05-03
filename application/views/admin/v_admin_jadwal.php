@@ -32,13 +32,26 @@
 
         <!--Search Bar-->
         <div class="searchbar text-center">
-                <input class="search" type="text" placeholder="Search...">
+            <form action="<?php echo site_url('admin/c_admin_jadwal/cari');?>" method="post">
+                <div class="form-group">
+                    <input class="search" type="text" placeholder="Search..." name="cari">
+                    <button class="btn btn-menu" type="submit">Cari</button>
+                </div>
+                <div class="form-group">
+                    
+                </div>
+            </form>
         </div>
         
     <div class="container">
         <div class="row">
             <div class="col-sm-8 offset-sm-2">
                 <div class="table-responsive">
+                    <div align="right">
+                        <button type="button" class="btn btn-menu" data-toggle="modal" data-target="#editModal" id="tambah"
+                        data-aksi="tambah"
+                        >Tambah</button>
+                    </div>
                     <table id="myTable" class="table">
                         <thead class="thead">
                             <tr>
@@ -51,6 +64,7 @@
                             </tr>
                         </thead>
                         <tbody>
+
                             <?php
                                 foreach ($query->result() as $row) {
                                     echo "<tr>";
@@ -71,7 +85,7 @@
                                         echo "</td>";
                                         echo "<td>";
                                         ?>
-                                            <button type="button" class="btn btn-icon" href="#" data-toggle="modal" data-target="#editModal" id="edit" 
+                                            <button type="button" class="btn btn-icon" data-toggle="modal" data-target="#editModal" id="edit" data-aksi="edit"
                                                 data-id="<?=$row->id_seminar?>" data-tanggal="<?=date("Y-m-d", strtotime($row->tanggal))?>" data-pukul="<?=date("H:i", strtotime($row->tanggal))?>"  data-ruang="<?=$row->ruang?>" data-keahlian="<?=$row->keahlian?>"
                                             >
                                                 <span class='fas fa-pencil-alt'></span>
@@ -107,23 +121,34 @@
         <script>
             $('#editModal').on('show.bs.modal', function (event) {
               var button = $(event.relatedTarget)
-              //data modal
-              var id = button.data('id')
-              var tanggal = button.data('tanggal')
-              var pukul = button.data('pukul')
-              var ruang = button.data('ruang')
-              var keahlian = button.data('keahlian')
-
+              var aksi = button.data('aksi')
               var modal = $(this)
-              modal.find('.modal-title').text('Edit jadwal id ' + id)
-              modal.find('.modal-body #id').val(id)
-              modal.find('.modal-body #tanggal').val(tanggal)
-              modal.find('.modal-body #pukul').val(pukul)
-              modal.find('.modal-body #ruang').val(ruang)
-              modal.find('.modal-body #keahlian').val(keahlian)
+              if(aksi == "edit"){
+                  //data modal
+                  var id = button.data('id')
+                  var tanggal = button.data('tanggal')
+                  var pukul = button.data('pukul')
+                  var ruang = button.data('ruang')
+                  var keahlian = button.data('keahlian')
+
+                  
+                  modal.find('.modal-title').text('Edit jadwal id ' + id)
+                  modal.find('.modal-body #id').val(id)
+                  modal.find('.modal-body #tanggal').val(tanggal)
+                  modal.find('.modal-body #pukul').val(pukul)
+                  modal.find('.modal-body #ruang').val(ruang)
+                  modal.find('.modal-body #keahlian').val(keahlian)
+              }else if(aksi == "tambah"){
+                    modal.find('.modal-title').text('Tambah jadwal seminar ')
+                    modal.find('.modal-body #aksi').val(aksi)
+                    modal.find('.modal-body #tanggal').val("");
+                    modal.find('.modal-body #pukul').val("");
+                    modal.find('.modal-body #ruang').val("");
+                    modal.find('.modal-body #keahlian').val("");
+              }
+              
             })
         </script>
-
                 
     </body>
 </html>

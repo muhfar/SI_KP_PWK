@@ -10,6 +10,7 @@
       </div>
       <div class="modal-body">
         <form action="<?php echo site_url('admin/c_admin_jadwal/edit');?>" method="POST">
+          <input type="hidden" name="aksi" id="aksi">
           <input type="hidden" name="id" id="id">
           <div class="form-group">
             <label>Waktu</label>
