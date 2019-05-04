@@ -12,7 +12,7 @@
 
 		<div id="id01" style="margin-top:-100px">
 			<form class="modalcontent-animate" action="<?php echo base_url('c_login/aksi_login'); ?>" method="POST">
-				<div class= "modal">
+				<div class= "modalLogin">
 					<title-page style="left:0; top:140px">Sign In</title-page>
 					
 					<br>
@@ -26,7 +26,7 @@
 					<label for="uname" style="top:50px">
 						<b type="normal"> Username </b>
 					</label>
-					<input type="text" style="padding-left:20px" placeholder="Enter Your Email or Username" name="uname" required>
+					<input class="form-control "type="text" style="padding-left:20px" placeholder="Enter Your Email or Username" name="uname" required>
 					
 					<br>
 					<br>
