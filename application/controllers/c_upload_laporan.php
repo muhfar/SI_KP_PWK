@@ -37,33 +37,20 @@ class c_upload_laporan extends CI_Controller {
 
 		if(!empty($_FILES['file']['name'])){	
 			//setting upload
-<<<<<<< HEAD
-			$config['upload_path']		= 'upload/';
-			$config['allowed_types']	= 'pdf|jpg|jpeg|png|gif';
-			$config['max_size']			= '10240';
-			$config['file_name']		= $_FILES['file']['name'];
-
-=======
 			$config['upload_path']		= './upload/laporan/';
 			$config['allowed_types']	= 'pdf';
 			$config['max_size']			= 1024;
 			$config['encrypt_name'] 	= TRUE;
->>>>>>> origin/farhan
 			//load config
 			$this->load->library('upload',$config);
 			
 			//upload file
 			if($this->upload->do_upload('file')){
-<<<<<<< HEAD
-				$uploadData = $this->upload->data();
-			}
-=======
 				$data = $this->upload->data();	
 
 				//datadb for database
 				$datadb['nim'] 		= $user;
 				$datadb['laporan'] 	= $data['file_name'];
->>>>>>> origin/farhan
 
 				//upload model
 				$this->load->model('m_upload');
