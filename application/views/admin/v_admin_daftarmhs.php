@@ -24,51 +24,35 @@
                     <th>NIM</th>
                     <th>Instansi</th>
                     <th>Alamat Instansi</th>
-                    <th>Tanggal KP</th>
-                    <th>Angkatan</th>
+                    <th>Tanggal KP Mulai</th>
+                    <th>Tanggal KP Selesai</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>cell1_1</td>
-                    <td>cell2_1</td>
-                    <td>cell3_1</td>
-                    <td>cell4_1</td>
-                    <td>cell5_1</td>
-                    <td>cell6_1</td>
-                </tr>
-                <tr>
-                    <td>cell1_2</td>
-                    <td>cell2_2</td>
-                    <td>cell3_2</td>
-                    <td>cell4_2</td>
-                    <td>cell5_2</td>
-                    <td>cell6_2</td>
-                </tr>
-                <tr>
-                    <td>cell1_3</td>
-                    <td>cell2_3</td>
-                    <td>cell3_3</td>
-                    <td>cell4_3</td>
-                    <td>cell5_3</td>
-                    <td>cell6_3</td>
-                </tr>
-                <tr>
-                    <td>cell1_4</td>
-                    <td>cell2_4</td>
-                    <td>cell3_4</td>
-                    <td>cell4_4</td>
-                    <td>cell5_4</td>
-                    <td>cell6_4</td>
-                </tr>
-                <tr>
-                    <td>cell1_5</td>
-                    <td>cell2_5</td>
-                    <td>cell3_5</td>
-                    <td>cell4_5</td>
-                    <td>cell5_5</td>
-                    <td>cell6_5</td>
-                </tr>
+                <?php
+                    foreach ($query->result() as $row) {
+                        echo "<tr>";
+                            echo "<td>";
+                                echo $row->nama_pengguna;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->NIM;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->instansi_nama;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->instansi_alamat;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->instansi_mulai;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->instansi_selesai;
+                            echo "</td>";
+                        echo "</tr>";
+                    }
+                ?>
             </tbody>
         </table>
 

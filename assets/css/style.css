@@ -307,10 +307,10 @@ tr:nth-child(even) {
 title-page {
     opacity: 1;
     position: absolute;
-    top: 111px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    top:25%;
     overflow: visible;
     width: 100%;
     white-space: nowrap;
@@ -576,3 +576,22 @@ b[type=normal]{
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
 }
+
+.grafik-admin {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 13%;
+    width: 1134px;
+    height: 500px;
+    border-radius: 13px;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #d6edff;
+    
+  }
+  .grafik-user {
+    width: 677px;
+    height: 383px;
+    border-radius: 13px;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #d6edff
+  }

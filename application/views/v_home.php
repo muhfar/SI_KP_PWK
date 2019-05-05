@@ -11,6 +11,7 @@
         
         <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     </head>
     <body>
         <!--LOAD HEADER-->
@@ -57,11 +58,53 @@
             <!--PENYEBARAN MAHASISWA KP-->    
             <div class="post" style="top:1250px;">
                 <title-post style="left:72px; top:1250px">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
-                <pict-post style="left:580px; top:1250px;"></pict-post>    
+                <pict-post style="left:580px; top:1250px;">
+                        <p>Grafik Persebaran Kerja Praktik Mahasiswa Perencanaan Wilayah dan Kota</p>
+                        <div id="visualization" style=height:90%;width:100%></div>
+                </pict-post>    
             </div>
         </section>
 
         <!--FOOTER-->
-        <?php $this->load->view('_footer');?>
+        
+        <!--FOOTER-->
+        <?php $result = $query;
+            //get number of rows returned
+            $num_results = $result->num_rows();
+            if( $num_results > 0){ ?>
+                <script type="text/javascript">
+                    function drawVisualization() {
+                        // Create and populate the data table.
+                        var data = google.visualization.arrayToDataTable([
+                            ['PL', 'Ratings'],
+                            <?php
+                                foreach ($result->result_array() as $row) {
+                                    extract($row);
+                                    echo "['{$nama}', {$jumlah_mhs}],";
+                                } 
+                            ?>
+                        ]);
+                        // Create and draw the visualization.
+                        new google.visualization.PieChart(document.getElementById('visualization')).
+                        draw(data);
+                    }
+        
+                    google.setOnLoadCallback(drawVisualization);
+                </script>
+            <?php
+            }else{
+                echo "Tidak ada data di database. '.$num_results'";
+            } ?>  
+        <script type="text/javascript">
+            //load package
+            google.load('visualization', '1', {packages: ['corechart']});
+        </script>
+        <!--Grafik
+        <script>
+            function showDiv() {
+                document.getElementById('SaveBtn').style.display = "block";
+            }
+            
+        </script>
     </body>
 </html>

@@ -32,8 +32,8 @@
                         <title-instansi >'.$row->nama_perusahaan.'</title-instansi>
                         <title-instansi style=top:100%>'.$row->keahlian.'</title-instansi>  
                     </div><a>';
-                    $left += 20;
-                    if($count == 5){
+                    $left += 25;
+                    if($count == 4){
                         $top += 40;
                         $left = 2;
                     }

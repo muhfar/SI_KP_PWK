@@ -63,8 +63,8 @@
             </tombol></a>
 =======
        
-            <div class="form_upload">     
-                <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" style = "border : 4px dashed rgba(7,0,70,1);"method="POST">		        
+            <div class="form_upload" style = "left:20%;">     
+                <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" style = "width:200%; border : 4px dashed rgba(7,0,70,1);"method="POST">		        
     		        <div class="dropzone" id="mydropzone" name="mainFileUploader">
     		            <div class="fallback">
     		                <input name="file" type="file"/>

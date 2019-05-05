@@ -21,9 +21,10 @@
       ?>  
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          UPLOAD
+          MAHASISWA
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="<?php echo base_url('c_form_daftar');?>">DAFTAR KP</a>
           <a class="dropdown-item" href="<?php echo base_url('c_upload_surat');?>">UPLOAD SURAT</a>
           <a class="dropdown-item" href="<?php echo base_url('c_upload_laporan');?>">UPLOAD LAPORAN</a>
       </li>

@@ -16,21 +16,32 @@
         <title-page>Jadwal Seminar Kerja Praktik</title-page>
 
         <!--Search Bar-->
-        <div class="searchbar" style = "top:250px">
+        <div class="searchbar" style = "top:250px; left:50%" >
             <div class="search">
                 <input type="text" placeholder="Search...">
             </div>
+            
         </div>
-
+        <!--Tombol Edit-->
+        <div id = "EditBtn" class= "editbtn"  style="top:275px; left:70%;">
+            <button type="submit" style="color:white; width:20%; heigth:10% ; right:50px" onclick="showDiv()" id="submit-all"> Edit </button>
+        </div>
+        <div id = "SaveBtn" class= "editbtn"  style="top:275px; left:70%; display:none;">
+            <button type="submit" style="color:white; width:20%; heigth:10% ; right:50px " onClick="window.location.reload()" id="submit-all"> Save </button>
+        </div>
+        
+        <!--JADWAL SEMINAR-->
         <table class="paleBlueRows" style="margin-top:300px; margin-left:50px">
             <thead>
                 <tr>
                     <th>Nama</th>
                     <th>NIM</th>
-                    <th>Laporan</th>
-                    <th>Surat  </th>
+                    <th>Waktu</th>
+                    <th>Ruangan</th>
+                    <th>Penguji</th>
                 </tr>
-            </thead>
+            </thead> 
+            <tbody>
             <tbody>
                 <?php
                     foreach ($query->result() as $row) {
@@ -39,22 +50,30 @@
                                 echo $row->nama_pengguna;
                             echo "</td>";
                             echo "<td>";
-                                echo $row->id_berkas;
+                                echo $row->NIM;
                             echo "</td>";
                             echo "<td>";
-                                echo $row->surat;
+                                echo $row->tanggal;
                             echo "</td>";
                             echo "<td>";
-                                echo $row->laporan;
+                                echo $row->ruang;
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row->keahlian;
                             echo "</td>";
                         echo "</tr>";
                     }
 
                 ?>
+            </tbody>
         </table>
 
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
-
+        <script>
+            function showDiv() {
+                document.getElementById('SaveBtn').style.display = "block";
+            }
+        </script>           
     </body>
 </html>
