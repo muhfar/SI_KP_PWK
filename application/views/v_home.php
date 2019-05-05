@@ -6,11 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>SI KP PWK</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+        
+        <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header');?>
+        <?php $this->load->view('header');?>
 
         <!--BANNER-->
         <section class="banner" 
@@ -22,28 +26,28 @@
         <!--MENU-->
         <section class="container-fluid">
             <a href="#"><div class="menu">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_daftar.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Alur<br>Pendaftaran KP</title-icon>
-            </div><a>
+            </div></a>
 
             <a href="#"><div class="menu" style="left: 403px">
-                <icon></icon>
+                <icon><img src="<?php echo base_url('assets/images/ic_penyebaran.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
-            </div><a>
+            </div></a>
 
-            <a href="#"><div class="menu" style="left: 697px">
-                <icon></icon>
+            <a href="<?php echo base_url('c_info_instansi');?>"><div class="menu" style="left: 697px">
+                <icon><img src="<?php echo base_url('assets/images/ic_perusahaan.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Info<br>Instansi</title-icon>
-            </div><a>
+            </div></a>
 
-            <a href="#"><div class="menu" style="left: 1000px">
-                <icon></icon>
+            <a href="<?php echo base_url('c_jadwal_seminar');?>"><div class="menu" style="left: 1000px">
+                <icon><img src="<?php echo base_url('assets/images/ic_jadwal.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Jadwal<br>Seminar KP</title-icon>
-            </div><a>
+            </div></a>
         </section>
 
         <!--POST-->
-        <section class="container-fluid">
+        <section class="container-fluid" style="margin-bottom:50px">
             <!--ALUR KP-->
             <div class="post">
                 <pict-post style="left:72px"></pict-post>    
@@ -51,9 +55,9 @@
             </div>
 
             <!--PENYEBARAN MAHASISWA KP-->    
-            <div class="post" style="top:1250px; padding-bottom:50px">
+            <div class="post" style="top:1250px;">
                 <title-post style="left:72px; top:1250px">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
-                <pict-post style="left:580px; top:1250px"></pict-post>    
+                <pict-post style="left:580px; top:1250px;"></pict-post>    
             </div>
         </section>
 

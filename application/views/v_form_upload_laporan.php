@@ -6,7 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>SI KP PWK</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+      
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+        
+        <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
+
         <link href='<?php echo base_url('assets/css/dropzone.css'); ?>' type='text/css' rel='stylesheet'>
     	<script src='<?php echo base_url("assets/js/dropzone.js") ?>' type='text/javascript'></script>
 
@@ -29,15 +35,19 @@
 		    .dz-message{
 		      text-align: center;
 		      font-size: 28px;
+<<<<<<< HEAD
 				}
+=======
+>>>>>>> origin/farhan
 		</style>
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header_login');?>
+        <?php $this->load->view('header');?>
 
         <!--FORM UPLOAD LAPORAN-->
         <title-page>Form Upload<br>Laporan Kerja Praktik</title-page>
+<<<<<<< HEAD
         <div class="form">
             <label>Laporan : </label>
             <div class='form_upload'>
@@ -51,38 +61,83 @@
             <a href="#"><tombol>
                 <p>Upload</p>
             </tombol></a>
+=======
+       
+            <div class="form_upload">     
+                <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" style = "border : 4px dashed rgba(7,0,70,1);"method="POST">		        
+    		        <div class="dropzone" id="mydropzone" name="mainFileUploader">
+    		            <div class="fallback">
+    		                <input name="file" type="file"/>
+    		            </div>
+    		        </div>
+    		    </form>
+    		    <div>
+    		        <button type="submit" style="color:white" id="submit-all"> upload </button>
+    		    </div>
+		    </div>
+>>>>>>> origin/farhan
             
-        </div>
 
-
-	
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
 	
 	<script>
-		Dropzone.options.fileUpload = {
-		  init: function() {
-		    this.on("success", function(file) { 
-		    	alert("Added file."); 
-		    });
-		    this.on("error", function(file) { 
-		    	alert("File error"); 
-		    	this.removeFile(file);
-		    });
+	Dropzone.options.mydropzone = {
+            url: "<?php echo base_url('c_upload_laporan/fileUpload'); ?>",
+            autoProcessQueue: false,
+            maxFiles: 1,
+            maxFilesize: 1,
+            acceptedFiles: 'application/pdf',
 
-		    this.on("maxfilesexceeded", function(file) { 
-		    	alert("maxfilesexceeded file."); 
-		    	this.removeFile(file);
-		    });		    
-		  },
-		  paramName : "file",
-		  acceptedFiles: 'application/pdf',
-		  maxFiles: 1,
-		  maxFilesize: 10,
-		  addRemoveLinks: true
-		};
+            init: function () {
 
+                var submitButton = document.querySelector("#submit-all");
+                var wrapperThis = this;
+
+                submitButton.addEventListener("click", function () {
+                    wrapperThis.processQueue();                                      
+                });
+
+                this.on("addedfile", function (file) {
+ 				console.log(file);
+                    // Create the remove button
+                    var removeButton = Dropzone.createElement("<button class='btn btn-lg dark'>Remove File</button>");
+
+                    // Listen to the click event
+                    removeButton.addEventListener("click", function (e) {
+                        // Make sure the button click doesn't submit the form:
+                        e.preventDefault();
+                        e.stopPropagation();
+
+
+                        // Remove the file preview.
+                        wrapperThis.removeFile(file);
+                        // If you want to the delete the file on the server as well,
+                        // you can do the AJAX request here.
+                    });
+
+                    // Add the button to the file preview element.
+                    file.previewElement.appendChild(removeButton);
+                });
+
+                    this.on("error", function(file) { 
+    			    	alert("File error"); 
+    			    	this.removeFile(file);
+    		    	});
+
+    		    	this.on("success", function(file) { 
+       		    		if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0){
+       		    			this.removeAllFiles();
+       				   		alert("success");	
+        		    	}
+	       		   	});
+            }
+        };
+
+			
     </script>
+
+
 
     </body>
 </html>

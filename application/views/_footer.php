@@ -1,20 +1,16 @@
-<header class="site-header">
-    <style>
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: rgb(255, 255, 255);
-            font-family: Poppins;
-            font-style: normal;
-            font-size: 19 px;
-            color: rgb(7, 0, 70);
-            text-align: center; }
+ <footer class="footer-sa">
+ <style>
+    #footer{
+    height:50px;
+    line-height:50px;
+    background:#333;
+    color:#fff;
+ 
+    position:fixed;
+    bottom:0px;
+ 
+    width:100%; /*biar memenuhi layar*/
+}
     </style>
 
-    <div class="footer">
-        <p>Footer</p>
-    </div>
-
-</header>
+</footer>
