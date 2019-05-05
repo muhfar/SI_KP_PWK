@@ -45,6 +45,10 @@ nav img{
     max-width: 100%;
 }
 
+.table-responsive{
+    margin-top: 30px;
+}
+
 .table{
     text-align: center;
 }
@@ -60,8 +64,21 @@ tr:nth-child(even) {
 /*end of table*/
 
 /*title page*/
-.title-page {
+/*temporary*/
+.title-page-admin{ 
     margin-top: 30px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    color: #070046; 
+    /*equal rgba(7,0,70,1)
+    note: kalo mau lebih enak pake #00004d;
+    letter-spacing: 0.03px; */
+}
+/*title page*/
+.title-page{
+    margin-top: 130px;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
