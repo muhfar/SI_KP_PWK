@@ -51,8 +51,8 @@
         <section class="container-fluid" style="margin-bottom:50px">
             <!--PENYEBARAN MAHASISWA KP-->    
             <div class="post" style="top:1250px;">
-                <title-post style="left:72px; top:1250px">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
-                <pict-post style="left:580px; top:1250px;">
+                <title-post style="left:72px;">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
+                <pict-post style="left:580px; ">
                         <p>Grafik Persebaran Kerja Praktik Mahasiswa Perencanaan Wilayah dan Kota</p>
                         <div id="visualization" style=height:90%;width:100%></div>
                 </pict-post>    

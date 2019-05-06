@@ -15,14 +15,14 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('_header_admin');?>
 
-        <!-- <title-page>Jadwal Seminar Kerja Praktik</title-page> -->
+        <!-- <title-page>Berkas KP</title-page> -->
         <div class="title-page-admin text-center">
             <h1>Berkas Laporan Kerja Praktik</h1>
         </div>
 
         <!--Search Bar-->
         <div class="searchbar text-center">
-            <form action="<?php echo site_url('admin/c_admin_jadwal/cari');?>" method="post">
+            <form action="<?php echo site_url('admin/c_admin_berkas/cari');?>" method="post">
                 <div class="form-group">
                     <input class="search" type="text" placeholder="Search..." name="cari">
                     <button class="btn btn-menu" type="submit">Cari</button>
@@ -30,7 +30,7 @@
             </form>
         </div>
 
-        <table class="paleBlueRows" style="margin-top:300px; margin-left:50px">
+        <table class="paleBlueRows" style="margin-top:5%; margin-left:50px">
             <thead>
                 <tr>
                     <th>Nama</th>
