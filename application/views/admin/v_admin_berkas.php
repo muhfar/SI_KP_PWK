@@ -57,11 +57,14 @@
                                 echo '<a href="/SI_KP_PWK/upload/surat/'.$row->surat.'"> '.$row->surat.'';
                             echo "</td>";
                         echo "</tr>";
-                    }
-
-                ?>
-        </table>
-
+                                        }
+                                    ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
 
