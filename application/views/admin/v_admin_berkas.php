@@ -29,20 +29,28 @@
                 </div>
             </form>
         </div>
-
-        <table class="paleBlueRows" style="margin-top:300px; margin-left:50px">
-            <thead>
-                <tr>
-                    <th>Nama</th>
-                    <th>NIM</th>
-                    <th>Laporan</th>
-                    <th>Surat  </th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    foreach ($query->result() as $row) {
-                        echo "<tr>";
+         <div class="container">
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <div class="table-responsive">
+                        <!-- <div align="right"> 
+                            <button type="button" class="btn btn-menu" data-toggle="modal" data-target="#editModal" id="tambah"
+                        data-aksi="tambah"
+                        >Tambah</button>
+                        </div>-->
+                        <table id="myTable" class="table">
+                            <thead class="thead">
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>NIM</th>
+                                    <th>Laporan</th>
+                                    <th>Surat  </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                     foreach ($query->result() as $row) {
+                                       echo "<tr>";
                             echo "<td>";
                                 echo $row->nama_depan; echo ' ';
                                 echo $row->nama_belakang;
@@ -57,11 +65,14 @@
                                 echo '<a href="/SI_KP_PWK/upload/surat/'.$row->surat.'"> '.$row->surat.'';
                             echo "</td>";
                         echo "</tr>";
-                    }
-
-                ?>
-        </table>
-
+                                        }
+                                    ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
 
