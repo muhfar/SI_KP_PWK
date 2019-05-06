@@ -272,13 +272,11 @@ tr:nth-child(even) {
     .form label {
         opacity: 1;
         position: absolute;
-        left: 338px;
         top: 281px;
         box-sizing: border-box;
         margin: 0;
         padding: 0;
         overflow: visible;
-        width: 69px;
         white-space: nowrap;
         text-align: left;
         font-family: Poppins;
@@ -334,9 +332,8 @@ title-page {
     opacity: 1;
     position: absolute;
     box-sizing: border-box;
-    margin: 0;
+    Margin-top:8%;
     padding: 0;
-    top:25%;
     overflow: visible;
     width: 100%;
     white-space: nowrap;
@@ -465,7 +462,7 @@ table.paleBlueRows {
         font-size: 14px; }
 
 /***LOGIN***/
-input[type=text], input[type=password], input[type=email], input[type=date]{
+input[type=text], input[type=password], input[type=email], input[type=date], select{
 	/*width: 353px;
 	height: 43px;
 	font-family: Poppins;
@@ -502,8 +499,8 @@ b[type=submit]{
 	font-stretch: normal;
 	line-height: 1.56;
 	letter-spacing: normal;
-	text-align: left;
-	color: #ffffff;
+	text-align: center;
+	color: var(--white);
 }
 		
 b[type=normal]{
@@ -521,7 +518,7 @@ b[type=normal]{
 	margin-left: 8.3%;
 }
 		
-/*button[type=submit]{
+button[type=submit]{
 	width: 176px;
 	height: 43px;
 	border-radius: 22px;
@@ -529,8 +526,7 @@ b[type=normal]{
 	border: solid 1px rgba(112, 112, 112, 0.03);
 	background-color: #070046;
 	margin-bottom: 50px;
-	margin-left:250px;
-}*/
+}
 
 .closebutton {
 	width: 19px;

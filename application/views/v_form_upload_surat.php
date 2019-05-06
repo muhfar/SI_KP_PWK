@@ -52,7 +52,7 @@
         ?>
         <title-page>Form Upload<br>Surat Pengantar Kerja Praktik</title-page>
         
-        <div class="form_upload"  style = "left:20%;">
+        <div class="form_upload" style="left:20%">
             	
                 <form action="<?= base_url('c_upload_surat/fileUpload') ?>" enctype="multipart/form-data" method="POST">		        
                    <div class="dropzone"  style = "width:200%;border : 4px dashed rgba(7,0,70,1);" id="mydropzone" name="mainFileUploader">
@@ -62,7 +62,7 @@
                    </div>
                </form>
                <div>
-                   <button type="submit" style="color:white;"id="submit-all"> upload </button>
+                   <button type="submit" style="color:white;margin-left: 75%; margin-top: 7%"id="submit-all"> Upload </button>
                </div>
            </div>
 

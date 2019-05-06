@@ -31,28 +31,41 @@
         <br>
         <br>
         <br>
-        <br>    
-        <br>
-        <br>
+        
         <form action="c_form_daftar/insert" style = "border : 0" method="POST">
-            <label for="instansi-nama" style="margin-left:135px">
-                <b type="normal">Nama Instansi </b>
+            <label for="notelp-mhs" style="margin-left:19.5%">
+                <b type="normal">No. Telepon Mahasiswa </b>
             </label>
-            <input type="text" style="padding-left:20px; padding-right:20px; margin-left:120px; width:500px" name="nama" id ="nama" required>
+            <input type="text" style="padding-left:1%; padding-right:1%; margin-left:3%; width:37%" name="notelp-mhs" id ="notelp-mhs" required>
 
             <br><br>
 
-            <label for="instansi-alamat" style="margin-left:135px">
+            <label for="alamat-mhs" style="margin-left:19.7%">
+                <b type="normal">Alamat Mahasiswa </b>
+            </label>
+            <input type="text" style="padding-left:1%; padding-right:1%; margin-left:6%; width:37%" name="alamat-mhs" id ="alamat-mhs" required>
+
+            <br><br>
+
+            <label for="instansi-nama" style="margin-left:20%">
+                <b type="normal">Nama Instansi </b>
+            </label>
+            <input type="text" style="padding-left:1%; padding-right:1%; margin-left:9%; width:37%" name="nama" id ="nama" required>
+
+            <br><br>
+
+            <label for="instansi-alamat" style="margin-left:20%">
                 <b type="normal">Alamat Instansi </b>
             </label>
-            <input type="text" style="padding-left:20px; padding-right:20px; margin-left:110px; width:500px" name="instansi-alamat" id ="instansi-alamat" required>
-            <br>
-            <br>
-            <label for="tanggal-kp-akhir" style="margin-left:135px">
+            <input type="text" style="padding-left:1%; padding-right:1%; margin-left:8%; width:37%" name="instansi-alamat" id ="instansi-alamat" required>
+            
+            <br><br>
+
+            <label for="provinsi" style="margin-left:20.5%">
                 <b type="normal">Provinsi</b>
             </label>
-            <select  style="margin-left:135px" name="provinsi" id="provinsi" onchange="tampilkan()">
-                    <option value="" disabled selected>--Pilih--</option>
+            <select  style="margin-left:13%; padding-left:1%; padding-right:1%; width:37%" name="provinsi" id="provinsi" onchange="tampilkan()">
+                    <option value="" disabled selected>-- Pilih --</option>
                     <option value="aceh">Aceh</option>
                     <option value="Sumut">Sumatera Utara</option>
                     <option value="sumbar">Sumatera Barat</option>
@@ -88,31 +101,32 @@
                     <option value="Papua">Papua</option>
                     <option value="Papua Barat">Papua Barat</option>
             </select>
+
             <br><br>
 
-            <label for="instansi-notlpn" style="margin-left:135px">
+            <label for="instansi-notlpn" style="margin-left:20%">
                 <b type="normal">No. Telepon Instansi </b>
             </label>
-            <input type="text" style="padding-left:20px; padding-right:20px; margin-left:70px; width:500px" name="instansi-notlpn" id = "instansi-notlpn" required>
+            <input type="text" style="padding-left:1%; padding-right:1%; margin-left:5%; width:37%" name="instansi-notlpn" id = "instansi-notlpn" required>
 
             <br><br>
 
-            <label for="tanggal-kp-mulai" style="margin-left:135px">
+            <label for="tanggal-kp-mulai" style="margin-left:20%">
                 <b type="normal">Tanggal Mulai </b>
             </label>
-            <input type="date" style="padding-left:20px; padding-right:20px; margin-left:0px; width:200px" name="tanggal-kp-mulai" id = "tanggal-kp-mulai"required>
+            <input type="date" style="padding-left:1%; padding-right:1%; margin-left:9%; width:37%" name="tanggal-kp-mulai" id = "tanggal-kp-mulai"required>
 
             <br><br>
 
-            <label for="tanggal-kp-akhir" style="margin-left:135px">
+            <label for="tanggal-kp-akhir" style="margin-left:20%">
                 <b type="normal" >Tanggal Selesai </b>
             </label>
-            <input type="date" style="padding-right:20px; margin-left:100px; width:200px" name="tanggal-kp-selesai" id = "tanggal-kp-selesai" required>
+            <input type="date" style="padding-left:1%; padding-right:1%; margin-left:8%; width:37%" name="tanggal-kp-selesai" id = "tanggal-kp-selesai" required>
             
             <br><br>
             <br>
-            <button type="submit" sytle="margin-left:500px">
-                <b type="submit" id="submit">Daftar</b>
+            <button type="submit" style="margin-left: 65%">
+                <b style="color: var(--white)" id="submit">Daftar</b>
             </button>
         
         </form>
