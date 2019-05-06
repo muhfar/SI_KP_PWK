@@ -18,7 +18,7 @@
         <!--Search Bar-->
         <div class="searchbar" style = "top:250px">
             <div class="search">
-                <input type="text" place'<a href="'.$row->link_perusahaan.'">'holder="Search...">
+                <input type="text" place '<a href="'.$row->link_perusahaan.'">'holder="Search...">
             </div>
         </div>
 
@@ -36,7 +36,8 @@
                     foreach ($query->result() as $row) {
                         echo "<tr>";
                             echo "<td>";
-                                echo $row->nama_pengguna;
+                                echo $row->nama_depan; echo ' ';
+                                echo $row->nama_belakang;
                             echo "</td>";
                             echo "<td>";
                                 echo $row->id_berkas;
@@ -45,7 +46,7 @@
                                 echo '<a href="/SI_KP_PWK/upload/laporan/'.$row->laporan.'"> '.$row->laporan.'';
                             echo "</td>";
                             echo "<td>";
-                                echo '<a href="/SI_KP_PWK/upload/laporan/'.$row->surat.'"> '.$row->surat.'';
+                                echo '<a href="/SI_KP_PWK/upload/surat/'.$row->surat.'"> '.$row->surat.'';
                             echo "</td>";
                         echo "</tr>";
                     }

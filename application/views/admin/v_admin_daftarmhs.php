@@ -33,7 +33,8 @@
                     foreach ($query->result() as $row) {
                         echo "<tr>";
                             echo "<td>";
-                                echo $row->nama_pengguna;
+                                echo $row->nama_depan; echo ' ';
+                                echo $row->nama_belakang;
                             echo "</td>";
                             echo "<td>";
                                 echo $row->NIM;
