@@ -19,7 +19,7 @@
 
         <!--BANNER-->
         <section class="banner" 
-            style="background-image: url(<?php echo base_url('assets/images/plano_img.png')?>); background-size: 700px;">
+            style="background-image: url(<?php echo base_url('assets/images/plano_img.png')?>); background-size: 800px ;">
             <h1>Sistem Informasi<br>Kerja Praktik</h1>
             <h2>Program Studi<br>Perencanaan Wilayah dan Kota</h2>
         </section>
@@ -99,12 +99,20 @@
             //load package
             google.load('visualization', '1', {packages: ['corechart']});
         </script>
-        <!--Grafik
-        <script>
-            function showDiv() {
-                document.getElementById('SaveBtn').style.display = "block";
-            }
-            
-        </script>
+        <!-- Start of LiveChat (www.livechatinc.com) code -->
+        <script type="text/javascript">
+            window.__lc = window.__lc || {};
+            window.__lc.license = 10870272;
+            (function() {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+            })();
+            </script>
+            <noscript>
+            <a href="https://www.livechatinc.com/chat-with/10870272/" rel="nofollow">Chat with us</a>,
+            powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+            </noscript>
+        <!-- End of LiveChat code -->
     </body>
 </html>

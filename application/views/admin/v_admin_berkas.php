@@ -13,12 +13,12 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('_header_admin');?>
 
-        <title-page>Jadwal Seminar Kerja Praktik</title-page>
+        <title-page>Berkas Kerja Praktik</title-page>
 
         <!--Search Bar-->
         <div class="searchbar" style = "top:250px">
             <div class="search">
-                <input type="text" placeholder="Search...">
+                <input type="text" place'<a href="'.$row->link_perusahaan.'">'holder="Search...">
             </div>
         </div>
 
@@ -42,10 +42,10 @@
                                 echo $row->id_berkas;
                             echo "</td>";
                             echo "<td>";
-                                echo $row->surat;
+                                echo '<a href="/SI_KP_PWK/upload/laporan/'.$row->laporan.'"> '.$row->laporan.'';
                             echo "</td>";
                             echo "<td>";
-                                echo $row->laporan;
+                                echo '<a href="/SI_KP_PWK/upload/laporan/'.$row->surat.'"> '.$row->surat.'';
                             echo "</td>";
                         echo "</tr>";
                     }

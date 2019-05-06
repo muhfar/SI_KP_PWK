@@ -35,10 +35,6 @@
 		    .dz-message{
 		      text-align: center;
 		      font-size: 28px;
-<<<<<<< HEAD
-				}
-=======
->>>>>>> origin/farhan
 		</style>
     </head>
     <body>
@@ -47,21 +43,6 @@
 
         <!--FORM UPLOAD LAPORAN-->
         <title-page>Form Upload<br>Laporan Kerja Praktik</title-page>
-<<<<<<< HEAD
-        <div class="form">
-            <label>Laporan : </label>
-            <div class='form_upload'>
-			  <!-- Dropzone -->
-				<div class='content'>
-		<!-- Dropzone -->
-	   	<form action="<?= base_url('c_upload_laporan/fileupload') ?>"style="border : 4px dashed cornflowerblue;" class="dropzone" id='fileupload'>
-	   	</form> 
-	</div> 
-		    </div>
-            <a href="#"><tombol>
-                <p>Upload</p>
-            </tombol></a>
-=======
        
             <div class="form_upload" style = "left:20%;">     
                 <form action="<?= base_url('c_upload_laporan/fileUpload') ?>" enctype="multipart/form-data" style = "width:200%; border : 4px dashed rgba(7,0,70,1);"method="POST">		        
@@ -75,7 +56,6 @@
     		        <button type="submit" style="color:white" id="submit-all"> upload </button>
     		    </div>
 		    </div>
->>>>>>> origin/farhan
             
 
         <!--FOOTER-->
@@ -137,7 +117,21 @@
 			
     </script>
 
-
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+        <script type="text/javascript">
+        window.__lc = window.__lc || {};
+        window.__lc.license = 10870272;
+        (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+        </script>
+        <noscript>
+        <a href="https://www.livechatinc.com/chat-with/10870272/" rel="nofollow">Chat with us</a>,
+        powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+        </noscript>
+    <!-- End of LiveChat code -->
 
     </body>
 </html>

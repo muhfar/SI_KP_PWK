@@ -5,6 +5,6 @@ class c_admin_penyebaran extends CI_Controller {
 	public function index()
 	{
 		$query['query'] = $this->db->select('*')->get('provinsi');
-		$this->load->view('v_admin_penyebaran',$query);
+		$this->load->view('admin/v_admin_penyebaran',$query);
 	}
 }

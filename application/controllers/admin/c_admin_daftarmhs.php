@@ -8,6 +8,6 @@ class c_admin_daftarmhs extends CI_Controller {
 		$this->db->from('pesertakp');
 		$this->db->join ('pengguna','pengguna.NIM = pesertakp.NIM');
 		$query['query'] =  $this->db->get();
-		$this->load->view('v_admin_daftarmhs',$query);
+		$this->load->view('admin/v_admin_daftarmhs',$query);
 	}
 }
