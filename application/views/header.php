@@ -1,5 +1,5 @@
 <?php
-  $nama = $this->session->userdata('nama_pengguna');
+  $nama = $this->session->userdata('nama');
 ?>
 
 <nav class="navbar navbar-expand-sm navbar-light fixed-top">

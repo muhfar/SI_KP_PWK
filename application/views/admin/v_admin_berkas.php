@@ -6,20 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>SI KP PWK</title>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+        <link rel="stylesheet" type="text/css" href="<? echo base_url('assets/css/all.min.css'); ?>">
 
     </head>
     <body>
         <!--LOAD HEADER-->
         <?php $this->load->view('_header_admin');?>
 
-        <title-page>Berkas Kerja Praktik</title-page>
+        <!-- <title-page>Jadwal Seminar Kerja Praktik</title-page> -->
+        <div class="title-page-admin text-center">
+            <h1>Berkas Laporan Kerja Praktik</h1>
+        </div>
 
         <!--Search Bar-->
-        <div class="searchbar" style = "top:250px">
-            <div class="search">
-                <input type="text" place '<a href="'.$row->link_perusahaan.'">'holder="Search...">
-            </div>
+        <div class="searchbar text-center">
+            <form action="<?php echo site_url('admin/c_admin_jadwal/cari');?>" method="post">
+                <div class="form-group">
+                    <input class="search" type="text" placeholder="Search..." name="cari">
+                    <button class="btn btn-menu" type="submit">Cari</button>
+                </div>
+            </form>
         </div>
 
         <table class="paleBlueRows" style="margin-top:300px; margin-left:50px">
