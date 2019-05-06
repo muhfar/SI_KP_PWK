@@ -35,6 +35,14 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('header');?>
 
+        <!-- SESSION -->
+        <?php $nama = $this->session->userdata('nama');
+            if($nama == ""){
+                redirect(site_url('c_login'));
+                echo "<script>alert('Silahkan Sign In terlebih dahulu!')</script>";
+            }
+        ?>
+
         <!--FORM UPLOAD LAPORAN-->
         <title-page>Form Upload<br>Laporan Kerja Praktik</title-page>
        

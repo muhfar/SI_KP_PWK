@@ -76,6 +76,9 @@ tr:nth-child(even) {
     note: kalo mau lebih enak pake #00004d;
     letter-spacing: 0.03px; */
 }
+.title-page-admin h1,h2{
+    font-weight: bold;
+}
 /*title page*/
 .title-page{
     margin-top: 130px;
@@ -114,7 +117,13 @@ tr:nth-child(even) {
     background-color: #ffffff;
     margin-bottom: 10px;
 }
+/*end of modal*/
 
+/*login*/
+.input-login{
+    padding-left: 20px;
+}
+/*end of login*/
 
 /*end of CRUD Modal*/
 

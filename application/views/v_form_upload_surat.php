@@ -42,7 +42,7 @@
         <?php $this->load->view('header');?>
 
         <!-- SESSION -->
-        <?php $nama = $this->session->userdata('nama_pengguna');
+        <?php $nama = $this->session->userdata('nama');
 
         if($nama == ""){
             redirect(site_url('c_login'));
