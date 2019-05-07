@@ -25,7 +25,7 @@
         <?php $this->load->view('admin/crudModal'); ?>
 
         <!-- <title-page>Jadwal Seminar Kerja Praktik</title-page> -->
-        <div class="title-page-admin text-center">
+        <div class="title-page text-center">
             <h1>Jadwal Seminar Kerja Praktik</h1>    
         </div>
         
