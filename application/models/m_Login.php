@@ -6,10 +6,10 @@ class M_Login extends CI_model{
 	function cek_login($data){
 		$pwd = md5($data['p']);
 		
-		// $this->db->where('NIM',$data['u']);
-		// $this->db->where('password',$pwd);
-
-		$query = $this->db->where('NIM',$data['u'])->where('password',$pwd)->get('pengguna');
+		$this->db->where('NIM',$data['u']);
+		$this->db->where('password',$pwd);
+// ->where('NIM',$data['u'])->where('password',$pwd)
+		$query = $this->db->get('pengguna');
 
 		if($query->num_rows()>0)
 		{
@@ -21,23 +21,25 @@ class M_Login extends CI_model{
 
 				$this->session->set_userdata($sess);
 
-				return $sess['level'];
+				return 1;
 			}
 		}
 		else
 		{	
-			$query = $this->db->where('username', $data['u'])->where('password',$pwd)->get('admin');	
-				if($query->num_rows()>0)
+			$this->db->where('username', $data['u']);
+			$this->db->where('password',$pwd);
+			$queryad = $this->db->get('admin');	
+				if($queryad->num_rows()>0)
 				{
-				foreach ($query->result() as $row) {
+				foreach ($queryad->result() as $row) {
 					$sess = array(	'nama' 	=> $row->nama,
 									'username' => $row->username,
-								  	'level' => "admin"
+								  	'level' => "adm"
 								  );
 
 					$this->session->set_userdata($sess);
 
-					return $sess['level'];
+					return 1;
 					}
 				}else{
 					return 0;

@@ -37,7 +37,7 @@
       </li>
 
       <?php
-        if(empty($level)){
+        if($level == ""){
       ?>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('c_login');?>">LOGIN</a>

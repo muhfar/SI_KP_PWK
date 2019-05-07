@@ -20,6 +20,21 @@
         <?php $this->load->view('header_admin');?>    
         <?php $this->load->view('admin/crudModal'); ?>
 
+        <!-- SESSION -->
+        <?php $level = $this->session->userdata('level');
+
+        if($level == ""){
+            echo "<script>alert('Silahkan login terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }elseif($level == "mhs"){
+            echo "<script>alert('Akun tidak dapat mengakses!');
+                window.location.href='".base_url()."';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
+        }
+
+        ?>
+
         <!-- <title-page>Jadwal Seminar Kerja Praktik</title-page> -->
         <div class="title-page text-center">
             <h1>Jadwal Seminar Kerja Praktik</h1>    

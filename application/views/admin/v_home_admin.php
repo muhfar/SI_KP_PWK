@@ -15,23 +15,25 @@
       
     </head>
     <body>
-        <!--LOAD HEADER-->
-        <?php $this->load->view('header_admin');?>
+        
 
         <!-- SESSION -->
         <?php $level = $this->session->userdata('level');
 
-        if(empty($level)){
-            echo "<script>alert('Silahkan Sign In terlebih dahulu!');
+        if($level == ""){
+            echo "<script>alert('Silahkan login terlebih dahulu!');
             window.location.href='".base_url()."c_login';</script>";
-        }else if($level == "mhs"){
+        }elseif($level == "mhs"){
             echo "<script>alert('Akun tidak dapat mengakses!');
-            window.location.href='".base_url()."';</script>";
+                window.location.href='".base_url()."';</script>";
         }else{
             // echo "<script>alert('Silahkan mengunggah')</script>";
         }
 
         ?>
+
+        <!--LOAD HEADER-->
+        <?php $this->load->view('header_admin');?>
 
         <!--BANNER-->
         <section class="banner" 
