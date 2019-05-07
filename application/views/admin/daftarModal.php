@@ -39,6 +39,10 @@
             <label>Tanggal KP Selesai</label>
             <input type="text" name="form-control form-modal-sm" id="instansi_selesai" name="Tanggal KP Selesai" required>
           </div>
+          <div class="form-group">
+            <label>Status</label>
+            <input type="text" name="form-control form-modal-sm" id="status" name="status" required>
+          </div>
         </div>
 
         <div>

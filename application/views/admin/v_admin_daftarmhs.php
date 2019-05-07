@@ -37,51 +37,72 @@
                 </div>
             </form>
         </div>
-
-        <!--JADWAL SEMINAR-->
-        <table class="paleBlueRows" style="margin-top:5%; margin-left:50px">
-            <thead>
-                <tr>
-                    <th>Nama</th>
-                    <th>NIM</th>
-                    <th>Instansi</th>
-                    <th>Alamat Instansi</th>
-                    <th>Tanggal KP Mulai</th>
-                    <th>Tanggal KP Selesai</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    foreach ($query->result() as $row) {
-                        echo "<tr>";
-                            echo "<td>";
-                                echo $row->nama_depan; echo ' ';
-                                echo $row->nama_belakang;
-                            echo "</td>";
-                            echo "<td>";
-                                echo $row->NIM;
-                            echo "</td>";
-                            echo "<td>";
-                                echo $row->instansi_nama;
-                            echo "</td>";
-                            echo "<td>";
-                                echo $row->instansi_alamat;
-                            echo "</td>";
-                            echo "<td>";
-                                echo $row->instansi_mulai;
-                            echo "</td>";
-                            echo "<td>";
-                                echo $row->instansi_selesai;
-                            echo "</td>";
-                            echo "<td>";
-                                echo $row->status;
-                            echo "</td>";
-                        echo "</tr>";
-                    }
-                ?>
-            </tbody>
-        </table>
+<div class="container">
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <div class="table-responsive">
+                        <div align="right">
+                            <button type="button" class="btn btn-menu" data-toggle="modal" data-target="#daftarModal" id="tambah" data-aksi="tambah">Tambah</button>
+                        </div>
+                        <table id="myTable" class="table">
+                            <thead class="thead">
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>NIM</th>
+                                    <th>Instansi</th>
+                                     <th>Alamat Instansi</th>
+                                     <th>Tanggal KP Mulai</th>
+                                     <th>Tanggal KP Selesai</th>
+                                     <th>Status</th>
+                                     <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                     foreach ($query->result() as $row) {
+                                        echo "<tr>";
+                                        echo "<td>";
+                                           echo $row->nama_depan.$row->nama_belakang;
+                                        echo "</td>";
+                                        echo "<td>";
+                                            echo $row->NIM;
+                                        echo "</td>";
+                                        echo "<td>";
+                                            echo $row->instansi_nama;
+                                        echo "</td>";
+                                        echo "<td>";
+                                            echo $row->instansi_alamat;
+                                        echo "</td>";
+                                        echo "<td>";
+                                            echo $row->instansi_mulai;
+                                        echo "</td>";
+                                        echo "<td>";
+                                            echo $row->instansi_selesai;
+                                        echo "</td>";
+                                        echo "<td>";
+                                            echo $row->status;
+                                        echo "</td>";
+                                        echo "<td>"
+                                            ?>
+                                            <button type="button" class="btn btn-icon" data-toggle="modal" data-target="#daftarModal" id="edit" data-aksi="edit"
+                                                data-=NIM"<?=$row->NIM?>" data-nama="<?=$row->nama_depan.$row->nama_belakang?>" data-instansi_nama="<?=$row->instansi_nama?>"  data-instansi_alamat="<?=$row->instansi_alamat?>" data-instansi_mulai="<?=$row->instansi_mulai?>" data-instansi_selesai="<?=$row->instansi_selesai?>" data-status="<?=$row->status?>"
+                                                >
+                                                <span class='fas fa-pencil-alt'></span>
+                                            </button>
+                                            <a class="btn btn-danger" href="<?php echo site_url('admin/c_admin_daftarmhs/delete/'. $row->NIM); ?>" onclick="return confirm('Apakah Anda Ingin Menghapus Data id=<?=$row->NIM;?> ?');">
+                                                <span class='icon fas fa-trash-alt'></span>
+                                            </a>
+                                            <?php
+                                        echo "</td>";
+                                        echo "</tr>";
+                                        }
+                                    ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--FOOTER-->
         <?php $this->load->view('_footer');?>
         <script>
@@ -101,6 +122,7 @@
                     var instansi_alamat = button.data('instansi_alamat')
                     var instansi_mulai = button.data('instansi_mulai')
                     var instansi_selesai = button.data('instansi_selesai')
+                    var status = button.data('status')
 
                     modal.find('modal-tittle').text('Edit data mahasiswa' + id)
                     modal.find('modal-body #NIM').val(NIM)
@@ -109,6 +131,7 @@
                     modal.find('modal-body #instansi_alamat').val(instansi_alamat)
                     modal.find('modal-body #instansi_mulai').val(instansi_mulai)
                     modal.find('modal-body #instansi_selesai').val(instansi_selesai)
+                    modal.find('modal-body #status').val(status)
                 } else if(aksi == tambah){
                     modal.find('.modal-title').text('Tambah jadwal seminar ')
                     modal.find('.modal-body #aksi').val(aksi)
@@ -118,6 +141,7 @@
                     modal.find('.modal-body #instansi_alamat').val("");
                     modal.find('.modal-body #instansi_lmulai').val("");
                     modal.find('.modal-body #instansi_selesai').val("");
+                    modal.find('.modal-body #status').val("");
                 }
             }
         </script>

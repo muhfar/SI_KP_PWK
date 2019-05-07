@@ -31,7 +31,7 @@
                 <title-icon>Alur<br>Pendaftaran KP</title-icon>
             </div></a>
 
-            <a href="#"><div class="menu" style="left: 403px">
+            <a href="#Penyebaran"><div class="menu" style="left: 403px">
                 <icon><img src="<?php echo base_url('assets/images/ic_penyebaran.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
             </div></a>
@@ -57,7 +57,7 @@
 
             <!--PENYEBARAN MAHASISWA KP-->    
             <div class="post" style="top:1250px;">
-                <title-post style="left:72px; top:1250px">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
+                <title-post style="left:72px; top:1250px" id="Penyebaran">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
                 <pict-post style="left:580px; top:1250px;">
                         <p>Grafik Persebaran Kerja Praktik Mahasiswa Perencanaan Wilayah dan Kota</p>
                         <div id="visualization" style=height:90%;width:100%></div>
