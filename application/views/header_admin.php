@@ -26,7 +26,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/#');?>">LIVE CHAT</a>
+        <a class="nav-link" href="https://my.livechatinc.com/chats/">LIVE CHAT</a>
       </li>
 
       <li class="nav-item">

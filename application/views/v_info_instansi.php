@@ -26,7 +26,7 @@
                 $count = 1;
 
                 foreach ($query->result() as $row){
-                   echo '<a href="'.$row->link_perusahaan.'"><div class="instansi" 
+                   echo '<a href="http://'.$row->link_perusahaan.'"><div class="instansi" 
                         style="left: '.$left.'%;top: '.$top.'%   ">
                         <icon-instansi><img src="'.$row->image.'" style="height:163px; width:226px; "></icon-instansi>
                         <title-instansi >'.$row->nama_perusahaan.'</title-instansi>

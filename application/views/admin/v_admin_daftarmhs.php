@@ -20,7 +20,7 @@
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header_admin');?>
+        <?php $this->load->view('header_admin');?>
         <?php $this->load->view('admin/daftarModal');?>
 
         <div class="title-page-admin text-center">

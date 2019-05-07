@@ -11,7 +11,7 @@
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header_admin');?>
+        <?php $this->load->view('header_admin');?>
 
         <title-page>Jadwal Seminar Kerja Praktik</title-page>
 
