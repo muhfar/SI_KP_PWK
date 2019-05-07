@@ -29,6 +29,10 @@
         <a class="nav-link" href="<?php echo base_url('admin/#');?>">LIVE CHAT</a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('admin/c_admin_instansi');?>">INSTANSI</a>
+      </li>
+
       <?php
         if(empty($nama)){
       ?>
