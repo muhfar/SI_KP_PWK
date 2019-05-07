@@ -42,11 +42,16 @@
         <?php $this->load->view('header');?>
 
         <!-- SESSION -->
-        <?php $nama = $this->session->userdata('nama');
+        <?php $level = $this->session->userdata('level');
 
-        if($nama == ""){
-            redirect(site_url('c_login'));
-            echo "<script>alert('Silahkan Sign In terlebih dahulu!')</script>";
+        if(empty($level)){
+            echo "<script>alert('Silahkan Sign In terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }else if($level == "admin"){
+            echo "<script>alert('Admin tidak dapat mengunggah!')
+            window.location.href='".base_url()."';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
         }
 
         ?>

@@ -34,13 +34,14 @@
       </li>
 
       <?php
-        if(empty($nama)){
+        if(empty($level)){
+          redirect('c_login');
       ?>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('c_login');?>">LOGIN</a>
-      </li>
+      </li> -->
       <?php
-        }else{
+        }else if ($level == "admin"){
       ?>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('c_login/keluar');?>">LOGOUT</a>

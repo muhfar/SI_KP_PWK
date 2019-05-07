@@ -12,10 +12,12 @@ class c_login extends CI_Controller {
 		$data['p'] = $this->input->post('pass');
 		$this->load->model('m_Login');
 		
-
-		if($this->m_Login->cek_login($data)){
+		$level = $this->m_Login->cek_login($data);
+		if($level == "mhs"){
 			echo "<script>alert('Login Successfully!')</script>";
 			redirect(base_url());
+		}elseif($level == "admin"){
+			redirect(base_url('admin'));
 		}else{
 			echo "<script>alert('Username atau Password tidak ditemukan!')</script>";
 			redirect(base_url('c_login'), 'refresh');

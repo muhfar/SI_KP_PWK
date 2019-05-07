@@ -18,6 +18,21 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('header_admin');?>
 
+        <!-- SESSION -->
+        <?php $level = $this->session->userdata('level');
+
+        if(empty($level)){
+            echo "<script>alert('Silahkan Sign In terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }else if($level == "mhs"){
+            echo "<script>alert('Akun tidak dapat mengakses!');
+            window.location.href='".base_url()."';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
+        }
+
+        ?>
+
         <!--BANNER-->
         <section class="banner" 
             style="background-image: url(<?php echo base_url('assets/images/plano_img.png')?>); background-size: 800px ;">
