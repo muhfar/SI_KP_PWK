@@ -1,3 +1,7 @@
+<?php
+  $level = $this->session->userdata('level');
+?>
+
 <nav class="navbar navbar-expand-sm navbar-light fixed-top">
   <a class="navbar-brand" href="<?php echo base_url(); ?>">
   	<img src="<?php echo base_url('assets/images/logo_itera.png')?>">
@@ -34,13 +38,7 @@
       </li>
 
       <?php
-        if(empty($nama)){
-      ?>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('c_login');?>">LOGIN</a>
-      </li>
-      <?php
-        }else{
+        if(!$level == ""){
       ?>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('c_login/keluar');?>">LOGOUT</a>

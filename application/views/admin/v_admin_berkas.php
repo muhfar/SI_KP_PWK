@@ -15,6 +15,21 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('header_admin');?>
 
+        <!-- SESSION -->
+        <?php $level = $this->session->userdata('level');
+
+        if($level == ""){
+            echo "<script>alert('Silahkan login terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }elseif($level == "mhs"){
+            echo "<script>alert('Akun tidak dapat mengakses!');
+                window.location.href='".base_url()."';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
+        }
+
+        ?>
+
         <!-- <title-page>Berkas KP</title-page> -->
         <div class="title-page-admin text-center">
             <h1>Berkas Laporan Kerja Praktik</h1>
