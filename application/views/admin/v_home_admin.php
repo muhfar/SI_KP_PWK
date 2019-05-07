@@ -11,11 +11,12 @@
         
         <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
-        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+      <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+      
     </head>
     <body>
         <!--LOAD HEADER-->
-        <?php $this->load->view('_header_admin');?>
+        <?php $this->load->view('header_admin');?>
 
         <!--BANNER-->
         <section class="banner" 
