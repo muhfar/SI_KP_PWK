@@ -32,8 +32,8 @@
                         <title-instansi >'.$row->nama_perusahaan.'</title-instansi>
                         <title-instansi style=top:100%>'.$row->keahlian.'</title-instansi>  
                     </div><a>';
-                    $left += 20;
-                    if($count == 5){
+                    $left += 25;
+                    if($count == 4){
                         $top += 40;
                         $left = 2;
                     }
@@ -41,49 +41,24 @@
                     
                 }
             ?>
-            <!-- <a href="#"><div class="instansi">
-                <icon-instansi></icon-instansi>
-                <title-instansi>Perusahaan A</title-instansi>
-            </div><a>
-            
-            
-
-            <a href="#"><div class="instansi"
-                style="left:686px">
-                <icon-instansi></icon-instansi>
-                <title-instansi>Perusahaan C</title-instansi>
-            </div><a>
-
-            <a href="#"><div class="instansi"
-                style="left:1005px">
-                <icon-instansi></icon-instansi>
-                <title-instansi>Perusahaan D</title-instansi>
-            </div><a>
-
-            <a href="#"><div class="instansi" style="top:544px">
-                <icon-instansi></icon-instansi>
-                <title-instansi>Perusahaan E</title-instansi>
-            </div><a>
-
-            <a href="#"><div class="instansi"
-                 style="left:367px; top:544px">
-                <icon-instansi></icon-instansi>
-                <title-instansi>Perusahaan F</title-instansi>
-            </div><a>
-
-            <a href="#"><div class="instansi"
-                style="left:686px; top:544px">
-                <icon-instansi></icon-instansi>
-                <title-instansi>Perusahaan G</title-instansi>
-            </div><a>
-
-            <a href="#"><div class="instansi"
-                style="left:1005px; top:544px">
-                <icon-instansi></icon-instansi>
-                <title-instansi>Perusahaan H</title-instansi>
-            </div><a> -->
         </section>
 
+        <!-- Start of LiveChat (www.livechatinc.com) code -->
+        <script type="text/javascript">
+            window.__lc = window.__lc || {};
+            window.__lc.license = 10870272;
+            (function() {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+            })();
+            </script>
+            <noscript>
+            <a href="https://www.livechatinc.com/chat-with/10870272/" rel="nofollow">Chat with us</a>,
+            powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+            </noscript>
+        <!-- End of LiveChat code -->
+        
         <!--FOOTER-->
         <!--<?php $this->load->view('_footer');?>-->
     </body>

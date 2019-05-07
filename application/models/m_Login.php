@@ -15,7 +15,7 @@ class M_Login extends CI_model{
 		{
 			foreach ($query->result() as $row) {
 				$sess = array(	'NIM'			=> $row->NIM,
-							  	'nama_pengguna' => $row->nama_pengguna);
+							  	'nama' => $row->nama_depan.$row->nama_belakang);
 
 				$this->session->set_userdata($sess);
 

@@ -42,7 +42,7 @@
         <?php $this->load->view('header');?>
 
         <!-- SESSION -->
-        <?php $nama = $this->session->userdata('nama_pengguna');
+        <?php $nama = $this->session->userdata('nama');
 
         if($nama == ""){
             redirect(site_url('c_login'));
@@ -52,17 +52,17 @@
         ?>
         <title-page>Form Upload<br>Surat Pengantar Kerja Praktik</title-page>
         
-        <div class="form_upload">
+        <div class="form_upload" style="left:20%">
             	
-                <form action="<?= base_url('c_upload_surat/fileUpload') ?>" enctype="multipart/form-data" style = "border : 4px dashed rgba(7,0,70,1);"method="POST">		        
-                   <div class="dropzone" id="mydropzone" name="mainFileUploader">
+                <form action="<?= base_url('c_upload_surat/fileUpload') ?>" enctype="multipart/form-data" method="POST">		        
+                   <div class="dropzone"  style = "width:200%;border : 4px dashed rgba(7,0,70,1);" id="mydropzone" name="mainFileUploader">
                        <div class="fallback">
                            <input name="file" type="file"/>
                        </div>
                    </div>
                </form>
                <div>
-                   <button type="submit" style="color:white;"id="submit-all"> upload </button>
+                   <button type="submit" style="color:white;margin-left: 75%; margin-top: 7%"id="submit-all"> Upload </button>
                </div>
            </div>
 
@@ -139,6 +139,21 @@
 
 
     </script>
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+        <script type="text/javascript">
+        window.__lc = window.__lc || {};
+        window.__lc.license = 10870272;
+        (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+        </script>
+        <noscript>
+        <a href="https://www.livechatinc.com/chat-with/10870272/" rel="nofollow">Chat with us</a>,
+        powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+        </noscript>
+    <!-- End of LiveChat code -->
 
     </body>
 </html>

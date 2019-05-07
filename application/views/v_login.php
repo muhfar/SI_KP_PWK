@@ -13,9 +13,8 @@
 		<div id="id01" style="margin-top:-100px">
 			<form class="modalcontent-animate" action="<?php echo base_url('c_login/aksi_login'); ?>" method="POST">
 				<div class= "modalLogin">
-					<title-page style="left:0; top:140px">Sign In</title-page>
+					<title-page style="left:0; top:5%">Sign In</title-page>
 					
-					<br>
 					<br>
 					<br>
 					<br>
@@ -23,25 +22,25 @@
 					<br>
 					<br>
 
-					<label for="uname" style="top:50px">
-						<b type="normal"> Username </b>
+					<label for="uname">
+						<b type="normal">Username </b>
 					</label>
-					<input class="form-control "type="text" style="padding-left:20px" placeholder="Enter Your Email or Username" name="uname" required>
+					<input class="form-control" type="text" style="margin-left:3%; padding-left:2%; padding-right:2%; height:8%; width:55%" placeholder="Enter Your Email or Username" name="uname" required>
 					
 					<br>
 					<br>
 					
 					<label for="pass"> 
-						<b type="normal"> Password </b>
+						<b type="normal">Password </b>
 					</label>
-					<input type="password" style="padding-left:20px" placeholder="Enter Password" name="pass" required>
+					<input type="password" style="margin-left:4%; padding-left:2%; padding-right:2%; height:8%; width:55%" placeholder="Enter Password" name="pass" required>
 					
 					<br>
 					<br>
 					<br>
 					
-					<button type="submit">
-						<b type="submit">Sign In</b>
+					<button type="submit" style="margin-left: 40%">
+						<b style="color: white" type="submit">Sign In</b>
 					</button>
 				</div>
 		</div>
