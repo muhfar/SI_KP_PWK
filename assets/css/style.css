@@ -66,7 +66,7 @@ tr:nth-child(even) {
 /*title page*/
 /*temporary*/
 .title-page-admin{ 
-    margin-top: 30px;
+    margin-top: 10%;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -544,7 +544,7 @@ button[type=submit]{
 
 /*Search pada admin*/
 .searchbar{
-    margin-top: 30px;
+    margin-top: -2%;
 }
 
   .search {
