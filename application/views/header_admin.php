@@ -24,13 +24,13 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('admin/c_admin_jadwal');?>">SEMINAR</a>
       </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="https://my.livechatinc.com/chats/">LIVE CHAT</a>
-      </li>
-
+	
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('admin/c_admin_instansi');?>">INSTANSI</a>
+      </li>
+	    
+      <li class="nav-item">
+        <a class="nav-link" href="https://my.livechatinc.com/chats/">LIVE CHAT</a>
       </li>
 
       <?php
