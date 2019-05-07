@@ -46,7 +46,7 @@
         <ul class="nav" style="padding :0 5rem 0 5rem !important">
             <li><a href="<?php echo base_url('admin/c_home_admin');?>">HOME</a></li>
             <li><a href="<?php echo base_url('admin/c_admin_daftarmhs');?>">MAHASISWA</a></li>
-            <li><a href="<?php echo base_url('admin/c_admin_penyebaran');?>">PENYEBARAN KP</a></li>
+            <li><a href="https://my.livechatinc.com/chats">LIVE CHAT</a></li>
             <li><a href="<?php echo base_url('admin/c_admin_berkas');?>">BERKAS KP</a></li>
             <li><a href="<?php echo base_url('admin/c_admin_jadwal');?>">SEMINAR</a></li>
             <li><a href="#">SIGN OUT</a></li>
