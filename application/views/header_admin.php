@@ -1,3 +1,7 @@
+<?php
+  $level = $this->session->userdata('level');
+?>
+
 <nav class="navbar navbar-expand-sm navbar-light fixed-top">
   <a class="navbar-brand" href="<?php echo base_url(); ?>">
   	<img src="<?php echo base_url('assets/images/logo_itera.png')?>">
@@ -24,23 +28,17 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('admin/c_admin_jadwal');?>">SEMINAR</a>
       </li>
-
+	
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('admin/c_admin_instansi');?>">INSTANSI</a>
+      </li>
+	    
       <li class="nav-item">
         <a class="nav-link" href="https://my.livechatinc.com/chats/">LIVE CHAT</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/c_admin_instansi');?>">INSTANSI</a>
-      </li>
-
       <?php
-        if(empty($nama)){
-      ?>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('c_login');?>">LOGIN</a>
-      </li>
-      <?php
-        }else{
+        if(!$level == ""){
       ?>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('c_login/keluar');?>">LOGOUT</a>

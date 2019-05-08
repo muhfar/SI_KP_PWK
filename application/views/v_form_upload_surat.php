@@ -42,14 +42,20 @@
         <?php $this->load->view('header');?>
 
         <!-- SESSION -->
-        <?php $nama = $this->session->userdata('nama');
+        <?php $level = $this->session->userdata('level');
 
-        if($nama == ""){
-            redirect(site_url('c_login'));
-            echo "<script>alert('Silahkan Sign In terlebih dahulu!')</script>";
+        if(empty($level)){
+            echo "<script>alert('Silahkan login terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }else if($level == "adm"){
+            echo "<script>alert('Admin tidak dapat mengunggah!')
+            window.location.href='".base_url()."admin';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
         }
 
         ?>
+        
         <title-page>Form Upload<br>Surat Pengantar Kerja Praktik</title-page>
         
         <div class="form_upload" style="left:20%">

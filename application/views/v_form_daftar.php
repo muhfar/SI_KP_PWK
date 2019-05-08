@@ -19,6 +19,20 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('header');?>
 
+        <!-- SESSION -->
+        <?php $level = $this->session->userdata('level');
+
+        if(empty($level)){
+            echo "<script>alert('Silahkan login terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }else if($level == "adm"){
+            echo "<script>alert('Admin tidak dapat mengunggah!')
+            window.location.href='".base_url()."admin';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
+        }
+
+        ?>
 
         <title-page>Form Pendaftaran Kerja Praktik</title-page>
         
