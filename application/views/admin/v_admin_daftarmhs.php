@@ -100,7 +100,7 @@
                                         echo "<td>"
                                             ?>
                                             <button type="button" class="btn btn-icon" data-toggle="modal" data-target="#daftarModal" id="edit" data-aksi="edit"
-                                                data-=NIM"<?=$row->NIM?>" data-nama="<?=$row->nama_depan.$row->nama_belakang?>" data-instansi_nama="<?=$row->instansi_nama?>"  data-instansi_alamat="<?=$row->instansi_alamat?>" data-instansi_mulai="<?=$row->instansi_mulai?>" data-instansi_selesai="<?=$row->instansi_selesai?>" data-status="<?=$row->status?>"
+                                                data-NIM="<?=$row->NIM?>" data-nama="<?=$row->nama_depan.$row->nama_belakang?>" data-instansi_nama="<?=$row->instansi_nama?>"  data-instansi_alamat="<?=$row->instansi_alamat?>" data-instansi_mulai="<?=$row->instansi_mulai?>" data-instansi_selesai="<?=$row->instansi_selesai?>" data-status="<?=$row->status?>"
                                                 >
                                                 <span class='fas fa-pencil-alt'></span>
                                             </button>

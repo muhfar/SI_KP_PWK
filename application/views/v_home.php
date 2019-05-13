@@ -53,7 +53,16 @@
             <div class="post">
                 <pict-post style="left:72px"></pict-post>    
                 <title-post>Alur Pendaftaran<br>Kerja Praktik</title-post>
+                <div class="download" action="<?php echo base_url('c_home/aksi_download'); ?>">
+                    <button type="submit" style="margin-left:-30%;width:200%">
+                            <!-- <b style="color: white" >Download File Pendaftaran</b> -->
+                            <!-- <a href="views/v_download_file.php">hayoo</a> -->
+                            <a style="color: white" href="javascript:(function(){window.open('assets/berkas/01.docx');})();javascript:(function(){window.open('assets/berkas/02.docx');})();">Download File Pendaftaran</a>
+                    </button>
+                </div>
             </div>
+
+            
 
             <!--PENYEBARAN MAHASISWA KP-->    
             <div class="post" style="top:1250px;">

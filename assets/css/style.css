@@ -53,6 +53,13 @@ nav img{
     text-align: center;
 }
 
+.download {
+    width: 194.5px;
+    height: 43px;
+    margin-top: 900px;
+    margin-left: 830px
+}
+
 .thead{
     background-color: #0B6FA4;
     color: #fff;

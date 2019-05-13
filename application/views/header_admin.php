@@ -34,7 +34,7 @@
       </li>
 	    
       <li class="nav-item">
-        <a class="nav-link" href="https://my.livechatinc.com/chats/">LIVE CHAT</a>
+        <a class="nav-link" href="javascript:(function(){window.open('https://my.livechatinc.com/chats/');})();">LIVE CHAT</a>
       </li>
 
       <?php
