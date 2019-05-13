@@ -8,14 +8,16 @@ class M_Login extends CI_model{
 		
 		$this->db->where('NIM',$data['u']);
 		$this->db->where('password',$pwd);
-
-		$query = $this->db->get('pengguna');	
+// ->where('NIM',$data['u'])->where('password',$pwd)
+		$query = $this->db->get('pengguna');
 
 		if($query->num_rows()>0)
 		{
 			foreach ($query->result() as $row) {
-				$sess = array(	'NIM'			=> $row->NIM,
-							  	'nama' => $row->nama_depan.$row->nama_belakang);
+				$sess = array(	'NIM'	=> $row->NIM,
+							  	'nama' 	=> $row->nama_depan.$row->nama_belakang,
+							  	'level' => "mhs"
+							  );
 
 				$this->session->set_userdata($sess);
 
@@ -23,8 +25,25 @@ class M_Login extends CI_model{
 			}
 		}
 		else
-		{
-			return 0;				
+		{	
+			$this->db->where('username', $data['u']);
+			$this->db->where('password',$pwd);
+			$queryad = $this->db->get('admin');	
+				if($queryad->num_rows()>0)
+				{
+				foreach ($queryad->result() as $row) {
+					$sess = array(	'nama' 	=> $row->nama,
+									'username' => $row->username,
+								  	'level' => "adm"
+								  );
+
+					$this->session->set_userdata($sess);
+
+					return 1;
+					}
+				}else{
+					return 0;
+				}
 		}
 	}	
 }

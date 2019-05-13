@@ -1,5 +1,5 @@
 <?php
-  $nama = $this->session->userdata('nama');
+  $level = $this->session->userdata('level');
 ?>
 
 <nav class="navbar navbar-expand-sm navbar-light fixed-top">
@@ -17,7 +17,7 @@
       </li>   
 
       <?php
-        if(!empty($nama)){
+        if(!empty($level)){
       ?>  
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,7 +37,7 @@
       </li>
 
       <?php
-        if(empty($nama)){
+        if($level == ""){
       ?>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('c_login');?>">LOGIN</a>

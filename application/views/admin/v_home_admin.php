@@ -15,6 +15,23 @@
       
     </head>
     <body>
+        
+
+        <!-- SESSION -->
+        <?php $level = $this->session->userdata('level');
+
+        if($level == ""){
+            echo "<script>alert('Silahkan login terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }elseif($level == "mhs"){
+            echo "<script>alert('Akun tidak dapat mengakses!');
+                window.location.href='".base_url()."';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
+        }
+
+        ?>
+
         <!--LOAD HEADER-->
         <?php $this->load->view('header_admin');?>
 

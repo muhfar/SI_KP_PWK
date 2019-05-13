@@ -19,6 +19,20 @@
         <!--LOAD HEADER-->
         <?php $this->load->view('header');?>
 
+        <!-- SESSION -->
+        <?php $level = $this->session->userdata('level');
+
+        if(empty($level)){
+            echo "<script>alert('Silahkan login terlebih dahulu!');
+            window.location.href='".base_url()."c_login';</script>";
+        }else if($level == "adm"){
+            echo "<script>alert('Admin tidak dapat mengunggah!')
+            window.location.href='".base_url()."admin';</script>";
+        }else{
+            // echo "<script>alert('Silahkan mengunggah')</script>";
+        }
+
+        ?>
 
         <title-page>Form Pendaftaran Kerja Praktik</title-page>
         
@@ -68,7 +82,7 @@
                     <option value="" disabled selected>-- Pilih --</option>
                     <option value="aceh">Aceh</option>
                     <option value="Sumut">Sumatera Utara</option>
-                    <option value="sumbar">Sumatera Barat</option>
+                    <option value="Sumbar">Sumatera Barat</option>
                     <option value="Riau">Riau</option>
                     <option value="Jambi">Jambi</option>
                     <option value="Sumsel">Sumatera Selatan</option>
@@ -93,13 +107,13 @@
                     <option value="Sulut">Sulawesi Utara</option>
                     <option value="Sulteng">Sulawesi Tengah</option>
                     <option value="Sulsel">Sulawesi Selatan</option>
-                    <option value="Sultengg">Sulawesi Tenggara</option>
+                    <option value="Sultenggara">Sulawesi Tenggara</option>
                     <option value="Sulbar">Sulawesi Barat</option>
                     <option value="Gorontalo">Gorontalo</option>
                     <option value="Maluku">Maluku</option>
-                    <option value="Maluku Utara">Maluku Utara</option>
+                    <option value="Malut">Maluku Utara</option>
                     <option value="Papua">Papua</option>
-                    <option value="Papua Barat">Papua Barat</option>
+                    <option value="PapuaBarat">Papua Barat</option>
             </select>
 
             <br><br>
