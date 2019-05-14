@@ -33,11 +33,11 @@
           </div>
           <div class="form-group">
             <label>Tanggal KP Mulai</label>
-            <input type="text" name="form-control form-modal-sm" id="instansi_mulai" name="Tanggal KP Mulai" required>
+            <input type="datae" name="form-control form-modal-sm" id="instansi_mulai" name="Tanggal KP Mulai" min="<?= date('Y-m-d');?>" required>
           </div>
           <div class="form-group">
             <label>Tanggal KP Selesai</label>
-            <input type="text" name="form-control form-modal-sm" id="instansi_selesai" name="Tanggal KP Selesai" required>
+            <input type="date" name="form-control form-modal-sm" id="instansi_selesai" name="Tanggal KP Selesai" min="<?= date('Y-m-d');?>" required>
           </div>
           <div class="form-group">
             <label>Status</label>

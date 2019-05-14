@@ -46,7 +46,7 @@
             <form action="<?php echo site_url('admin/c_admin_jadwal/cari');?>" method="post">
                 <div class="form-group">
                     <input class="search" type="text" placeholder="Search..." name="cari">
-                    <button class="btn btn-menu" type="submit">Cari</button>
+                    <button class="btn btn-menu" type="submit" style="margin-top:3.5%">Cari</button>
                 </div>
             </form>
         </div>
@@ -141,6 +141,7 @@
 
                   
                   modal.find('.modal-title').text('Edit jadwal id ' + id)
+                  modal.find('.modal-body #aksi').val(aksi)
                   modal.find('.modal-body #id').val(id)
                   modal.find('.modal-body #tanggal').val(tanggal)
                   modal.find('.modal-body #pukul').val(pukul)
