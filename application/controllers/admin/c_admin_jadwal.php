@@ -72,7 +72,7 @@ class c_admin_jadwal extends CI_Controller {
 				// redirect('admin/c_admin_jadwal');
 			}
 		}else{
-			$query['query'] = $this->db->select('*')->where('tanggal >= NOW()' )->order_by('tanggal', 'ASC')->get('seminar',10);
+			$query['query'] = $this->db->select('*')->where('tanggal >= NOW()' )->order_by('tanggal', 'ASC')->get('seminar');
 			$this->load->view('admin/v_admin_jadwal',$query);
 		}
 	}

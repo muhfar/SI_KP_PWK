@@ -98,7 +98,7 @@
                                         echo "</td>";
                                         echo "<td>";
                                                 ?>
-                                                    <button type="button" class="btn btn-icon" data-toggle="modal" data-target="#instansiModal" id="edit" data-aksi="edit"
+                                                    <!-- <button type="button" class="btn btn-icon" data-toggle="modal" data-target="#instansiModal" id="edit" data-aksi="edit"
                                                         data-id="<?=$row->id_perusahaan?>" 
                                                         data-nama="<?=$row->nama_perusahaan?>" 
                                                         data-keahlian="<?=$row->keahlian?>"  
@@ -107,7 +107,7 @@
                                                         data-image="<?=$row->image?>"
                                                     >
                                                     <span class='fas fa-pencil-alt'></span>
-                                                    </button>
+                                                    </button> -->
                                                     <a class="btn btn-danger" href="<?php echo site_url('admin/c_admin_instansi/delete/'. $row->id_perusahaan); ?>" onclick="return confirm('Apakah Anda Ingin Menghapus Data id=<?=$row->id_perusahaan;?> ?');">
                                                     <span class='icon fas fa-trash-alt'></span>
                                                     </a>
@@ -152,7 +152,7 @@
                   modal.find('.modal-body #ruang').val(ruang)
                   modal.find('.modal-body #keahlian').val(keahlian)
               }else if(aksi == "tambah"){
-                    modal.find('.modal-title').text('Tambah jadwal seminar ')
+                    modal.find('.modal-title').text('Tambah Instansi')
                     modal.find('.modal-body #aksi').val()
                     modal.find('.modal-body #nama').val();
                     modal.find('.modal-body #keahlian').val();

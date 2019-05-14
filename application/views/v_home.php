@@ -26,7 +26,7 @@
         
         <!--MENU-->
         <section class="container-fluid">
-            <a href="#"><div class="menu">
+            <a href="#alur"><div class="menu">
                 <icon><img src="<?php echo base_url('assets/images/ic_daftar.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Alur<br>Pendaftaran KP</title-icon>
             </div></a>
@@ -51,13 +51,13 @@
         <section class="container-fluid" style="margin-bottom:50px">
             <!--ALUR KP-->
             <div class="post">
-                <pict-post style="left:72px"></pict-post>    
-                <title-post>Alur Pendaftaran<br>Kerja Praktik</title-post>
+                <pict-post id="alur" style="left:72px"></pict-post>    
+                <title-post >Alur Pendaftaran<br>Kerja Praktik</title-post>
                 <div class="download" action="<?php echo base_url('c_home/aksi_download'); ?>">
-                    <button type="submit" style="margin-left:-30%;width:200%">
+                    <button type="submit" style="margin-left:-30%;width:200%" onClick="javascript:(function(){window.open('assets/berkas/01.docx');})();javascript:(function(){window.open('assets/berkas/02.docx');})();">
                             <!-- <b style="color: white" >Download File Pendaftaran</b> -->
                             <!-- <a href="views/v_download_file.php">hayoo</a> -->
-                            <a style="color: white" href="javascript:(function(){window.open('assets/berkas/01.docx');})();javascript:(function(){window.open('assets/berkas/02.docx');})();">Download File Pendaftaran</a>
+                            <b style="color: white" >Download File Pendaftaran</b>
                     </button>
                 </div>
             </div>

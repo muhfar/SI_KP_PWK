@@ -2,6 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class c_admin_instansi extends CI_Controller {
+
+	public function __construct()
+    {
+        parent::__construct();
+        // Your own constructor code
+    }
+
 	public function index()
 	{
 		$query['query'] = $this->db->select('*')->get('perusahaan');
@@ -21,19 +28,19 @@ class c_admin_instansi extends CI_Controller {
 	public function edit(){
 		$aksi = $this->input->post('aksi');
 		$id = $this->input->post('id');
-		$nama = $this->input->post('nama');
+		$nama = $this->input->post('ruang');
 		$keahlian = $this->input->post('keahlian');
-		$link = $this->input->post('link_perusahaan');
+		$link = $this->input->post('link');
 		$keterangan = $this->input->post('keterangan');
-		$iamge = $this->input->post('image');
-		echo "<script>alert('Akun ".$id."tidak dapat mengakses!');
-            </script>";
+		// $image = $this->input->post('image');
+		$image = "assets/images/plano_img.png";
+
 		$data = array(
-			'nama_perusahaan'=> $nama,
-			'keahlian'=>$keahlian,
-			'link_perusahaan'=>$link,
-			'keterangan'=>$keterangan,
-			'image'=>$iamge,
+			'nama_perusahaan' => $nama,
+			'keahlian' => $keahlian,
+			'link_perusahaan' => $link,
+			'keterangan' => $keterangan,
+			'image' => $image,
 		);
 		
 		$this->db->where('id_perusahan', $id);
@@ -54,36 +61,39 @@ class c_admin_instansi extends CI_Controller {
 
 
 	}
-	/*
 
-	public function delete($id){
-		if(!is_null($id)){
-			if($this->db->where('id_seminar', $id)->delete('seminar')){
-				redirect('admin/c_admin_jadwal');	
-			}
-		}else{
-			echo "<script>alert('Delete Failed');</script>";
-		}
-	}
+	// public function aksi_upload(){
+	// 	$config['upload_path']          = './assets/images/';
+	// 	$config['allowed_types']        = 'gif|jpg|png';
+	// 	$config['max_size']             = 10000;
+ 
+	// 	$this->load->library('upload', $config);
+ 
+	// 	if ( ! $this->upload->do_upload('berkas')){
+	// 		$error = array('error' => $this->upload->display_errors());
+	// 		$this->load->view('v_upload', $error);
+	// 	}else{
+	// 		$data = array('upload_data' => $this->upload->data());
+	// 		//$this->load->view('v_upload_sukses', $data);
+	// 	}
+	// }
 
 	public function cari(){
 		$cari = $this->input->post("cari");
 		if($cari != ""){
-			$this->db->select('*')->like('id_seminar', $cari);
-			$this->db->or_like('tanggal', $cari);
-			$this->db->or_like('ruang', $cari);
+			$this->db->select('*')->like('id_perusahaan', $cari);
+			$this->db->or_like('nama_perusahaan', $cari);
+			$this->db->or_like('link_perusahaan', $cari);
 			$this->db->or_like('keahlian', $cari);
 
-
-			$query['query'] = $this->db->where('tanggal >= NOW()' )->get('seminar');
+			$query['query'] = $this->db->select('id_perusahaan,nama_perusahaan,link_perusahaan,keahlian')->get('perusahaan');
 			if(!is_null($query)){
-				$this->load->view('admin/v_admin_jadwal',$query);
+				$this->load->view('admin/v_admin_instansi',$query);
 				// redirect('admin/c_admin_jadwal');
 			}
 		}else{
-			$query['query'] = $this->db->select('*')->where('tanggal >= NOW()' )->order_by('tanggal', 'ASC')->get('seminar',10);
-			$this->load->view('admin/v_admin_jadwal',$query);
+			$query['query'] = $this->db->select('*')->get('perusahaan');
+			$this->load->view('admin/v_admin_instansi',$query);
 		}
 	}
-	*/
 }

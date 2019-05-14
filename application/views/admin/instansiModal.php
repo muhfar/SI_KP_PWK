@@ -7,37 +7,46 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <!-- <?php //echo form_open_multipart('c_admin_instansi/aksi_upload');?>
+ 
+              <input type="file" name="berkas" />
+            
+              <br /><br />
+
+              
+              <input type="submit" value="upload" />
+            
+            </form> -->
       <div class="modal-body">
         <form action="<?php echo site_url('admin/c_admin_instansi/edit');?>" method="POST">
           <input type="hidden" name="aksi" id="aksi">
           <input type="hidden" name="id" id="id">
           <div class="form-group">
-            <label>Nama Instansi</label>
-            <input type="text" name="form-control form-modal-sm" id="nama" name="nama" required>
+            <label>Nama Perusahaan</label>
+            <input type="text" class="form-control form-modal-sm" id="ruang" name="ruang" required>
           </div>
           <div class="form-group">
             <label>Keahlian</label>
-            <input type="text" name="form-control form-modal-sm" id="keahlian" name="keahlian" required>
+            <input type="text" class="form-control form-modal-sm" id="keahlian" name="keahlian" required>
           </div>
           <div class="form-group">
-            <label>Link Instansi</label>
-            <input type="text" name="form-control form-modal-sm" id="link" name="link" required>
+            <label>Link Perusahaan</label>
+            <input type="text" class="form-control form-modal-sm" id="link" name="link" required>
           </div>
           <div class="form-group">
-            <label>Keterang</label>
-            <input type="text" name="form-control form-modal-sm" id="keterangan" name="keterangan" required>
+            <label>Keterangan</label>
+            <input type="text" class="form-control form-modal-sm" id="keterangan" name="keterangan" required>
           </div>
-          <div class="form-group">
-            <label>Link Image</label>
-            <input type="text" name="form-control form-modal-sm" id="image" name="image" required>
-          </div>
-        </div>
+          
+            
+      </div>
 
-        <div>
+        <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-primary">Simpan</button> 
         </div>
       </form>
+      
     </div>
   </div>
 </div>

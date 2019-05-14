@@ -44,22 +44,22 @@
         
         <!--MENU-->
         <section class="container-fluid">
-            <a href="#"><div class="menu">
+            <a href="admin/c_admin_daftarmhs"><div class="menu">
                 <icon><img src="<?php echo base_url('assets/images/ic_daftar.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Daftar<br>Mahasiswa</title-icon>
             </div></a>
 
-            <a href="#"><div class="menu" style="left: 403px">
+            <a href="#penyebaran"><div class="menu" style="left: 403px">
                 <icon><img src="<?php echo base_url('assets/images/ic_penyebaran.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Penyebaran KP<br>Mahasiswa</title-icon>
             </div></a>
 
-            <a href="#"><div class="menu" style="left: 697px">
+            <a href="admin/c_admin_berkas"><div class="menu" style="left: 697px">
                 <icon><img src="<?php echo base_url('assets/images/ic_perusahaan.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Laporan<br>Kerja Praktik</title-icon>
             </div></a>
 
-            <a href="#"><div class="menu" style="left: 1000px">
+            <a href="admin/c_admin_jadwal"><div class="menu" style="left: 1000px">
                 <icon><img src="<?php echo base_url('assets/images/ic_jadwal.png')?>" style="width:92px; height:92px;"></icon>
                 <title-icon>Jadwal<br>Seminar KP</title-icon>
             </div></a>
@@ -69,7 +69,7 @@
         <section class="container-fluid" style="margin-bottom:50px">
             <!--PENYEBARAN MAHASISWA KP-->    
             <div class="post" style="top:1250px;">
-                <title-post style="left:72px;">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
+                <title-post id="penyebaran" style="left:72px;">Penyebaran Kerja<br>Praktik Mahasiswa</title-post>
                 <pict-post style="left:580px; ">
                         <p>Grafik Persebaran Kerja Praktik Mahasiswa Perencanaan Wilayah dan Kota</p>
                         <div id="visualization" style=height:90%;width:100%></div>
