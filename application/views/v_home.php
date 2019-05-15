@@ -51,9 +51,13 @@
         <section class="container-fluid" style="margin-bottom:50px">
             <!--ALUR KP-->
             <div class="post">
-                <pict-post id="alur" style="left:72px"></pict-post>    
+                <pict-post id="alur"  style="left:72px">
+                    <img src="<?php echo base_url('assets/images/alurkp.jpg')?>" style="width:100%; height:100%;">
+                </pict-post>    
                 <title-post >Alur Pendaftaran<br>Kerja Praktik</title-post>
                 <div class="download" action="<?php echo base_url('c_home/aksi_download'); ?>">
+                    <div>
+                    </div>
                     <button type="submit" style="margin-left:-30%;width:200%" onClick="javascript:(function(){window.open('assets/berkas/01.docx');})();javascript:(function(){window.open('assets/berkas/02.docx');})();">
                             <!-- <b style="color: white" >Download File Pendaftaran</b> -->
                             <!-- <a href="views/v_download_file.php">hayoo</a> -->
