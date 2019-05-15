@@ -11,7 +11,7 @@
         
         <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
-      <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 
     </head>
     <body>
@@ -43,7 +43,7 @@
             <form action="<?php echo site_url('admin/c_admin_berkas/cari');?>" method="post">
                 <div class="form-group">
                     <input class="search" type="text" placeholder="Search..." name="cari">
-                    <button class="btn btn-menu" type="submit">Cari</button>
+                    <button class="btn btn-menu" type="submit" style="margin-top:3.5%">Cari</button>
                 </div>
             </form>
         </div>

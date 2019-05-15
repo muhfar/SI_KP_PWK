@@ -53,6 +53,13 @@ nav img{
     text-align: center;
 }
 
+.download {
+    width: 194.5px;
+    height: 43px;
+    margin-top: 900px;
+    margin-left: 830px
+}
+
 .thead{
     background-color: #0B6FA4;
     color: #fff;
@@ -63,6 +70,22 @@ tr:nth-child(even) {
 
 /*end of table*/
 
+/*title page*/
+/*temporary*/
+.title-page-admin{ 
+    margin-top: 10%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    color: #070046; 
+    /*equal rgba(7,0,70,1)
+    note: kalo mau lebih enak pake #00004d;
+    letter-spacing: 0.03px; */
+}
+.title-page-admin h1,h2{
+    font-weight: bold;
+}
 /*title page*/
 .title-page{
     margin-top: 130px;
@@ -528,7 +551,7 @@ button[type=submit]{
 
 /*Search pada admin*/
 .searchbar{
-    margin-top: 30px;
+    margin-top: -2%;
 }
 
   .search {
