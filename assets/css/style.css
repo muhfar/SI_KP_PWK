@@ -11,6 +11,11 @@ nav{
     
 }
 
+/* @font-face{
+font-family:Poppins;
+src: url(‘http://localhost/SI_KP_PWK/assets/font/Poppins-Regular.otf’);
+} */
+
 nav img{
     width: 60;
     height: 50px;
